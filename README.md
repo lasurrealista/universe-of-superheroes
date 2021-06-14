@@ -25,7 +25,7 @@ Egy mobiloptimalizált, látványos felületen a szuperhős meghatározása olva
 
 - A Superheroes gombra kattintva az alkalmazás a szuperhősöket listázó aloldalra navigálva megjeleníti az összes szuperhős adatbázisban tárolt adatait.
 - A Marvel Characters gombra kattintva az alkalmazás a Marvel szuperhősök aloldalra navigálva megjeleníti a marveles szuperhősök adatbázisban tárolt, kifejezetten a készítők által lényegesnek tartott adatait.
-- A Marvel Comics gombra kattintva az alkalmazás a Marvel képregények azoldalra navigálva megjeleníti a marveles képregények adatbázisban tárolt adatait.
+- A Marvel Comics gombra kattintva az alkalmazás a Marvel képregények aloldalra navigálva megjeleníti a marveles képregények adatbázisban tárolt adatait.
 - A Marvel Stories gombra kattintva az alkalmazás a Marvel történetek aloldalra navigálva megjeleníti a marveles történetek adatbázisban tárolt adatait.
 - A Marvel Events gombra kattintva az alkalmazás a Marvel események aloldalra navigálva megjeleníti a marveles univerzum legjelentősebb szuperhősöket érintő eseményeinek adatbázisban tárolt adatait.
 - A Marvel Creators gombra kattintva az alkalmazás a Marvel képregények készítői aloldalra navigálva megjeleníti a marveles univerzum készítőinek adatbázisban tárolt adatait.
@@ -114,7 +114,7 @@ Mindkét szcenárió megvalósítása esetén a kártyás nézetben a List gombr
 > _Egy szabadszavas input mező segítségével bármilyen kulcsszóra kereshetek az adatbázisban a választott kategórián belül._
 
 **Elfogadási kritérium:**  
-- A Search gombra való kattintással az alkalmazás kikeresi a kulcsszónak megfelelő rekordokat az adatbázisnak a legördülő menüben választott ketgóriájából, és listázza azokat.
+- A Search gombra való kattintással az alkalmazás kikeresi a kulcsszónak megfelelő rekordokat az adatbázisnak a legördülő menüben választott kategóriájából, és listázza azokat.
 
 ---
 
