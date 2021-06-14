@@ -130,22 +130,21 @@ Mindkét szcenárió megvalósítása esetén a kártyás nézetben a List gombr
 ---
 ## _**3. A Marvel Universe aloldalai**_
 ---
----
 
 **_Marvel Characters - Készítői oldal_**
 
 ---
 
 **1. agilis felhasználói történet:**
-> _Az alkalmazás a Marvel szuperhősök aloldalra navigálva megjeleníti a marveles szuperhősök adatbázisban tárolt, kifejezetten a készítők által lényegesnek tartott adatait._
+> _Az alkalmazás a Marvel karakterek aloldalra navigálva megjeleníti a marveles karakterek adatbázisban tárolt, kifejezetten a készítők által lényegesnek tartott adatait._
 
 **Elfogadási kritérium:**  
-Az aloldal megjeleníti az összes marveles szuperhős adatait lista formátumban.  
+Az aloldal megjeleníti az összes marveles karakter adatait lista formátumban.  
 Ezek az adatok a következők:
 - id (azonosító)
 - name (név)
 - thumbnail (kép)
-- url (a szuperhős marveles oldalára mutató link)
+- url (a karakter marveles oldalára mutató link)
 - stories - returned (hányszor tért vissza)
 - active (jelenleg dolgoznak-e vele kapcsolatos történeteken)
 
@@ -153,36 +152,36 @@ Ezek az adatok a következők:
 
 **2. agilis felhasználói történet:**
 
-> _A New Marvel Superhero gombra kattintva egy űrlap segítségével 
-> új marveles szuperhős adatait vehetem fel és menthetem el a készítői adatbázisban._
+> _A New Marvel Character gombra kattintva egy űrlap segítségével 
+> új marveles karakter adatait vehetem fel és menthetem el a készítői adatbázisban._
 
 **Elfogadási kritérium:**  
-- A New Marvel Superhero gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles szuperhős adatait tudom input mezők segítségével bevinni.
+- A New Marvel Character gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles karakter adatait tudom input mezők segítségével bevinni.
 - A Save gombra kattintva a program az adatbázisba menti a megadott adatokat.
-- A Back gombra kattintva az összes marveles szuperhőst listázó oldalra navigál vissza az alkalmazás.
+- A Back gombra kattintva az összes marveles karaktert listázó oldalra navigál vissza az alkalmazás.
 
 ---
 
 **3. agilis felhasználói történet:**
 
 > _Az Update ikonnal ellátott gombra kattintva egy űrlap segítségével
-> a marveles szuperhős adatait szerkeszthetem és menthetem el a készítői adatbázisban._
+> a marveles karakter adatait szerkeszthetem és menthetem el a készítői adatbázisban._
 
 **Elfogadási kritérium:**  
-- Az Update gombra való kattintással a marveles szuperhős egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott szuperhős adatait tudom szerkeszthető mezők segítségével módosítani.
+- Az Update gombra való kattintással a marveles karakter egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott karakter adatait tudom szerkeszthető mezők segítségével módosítani.
 - A Save gombra kattintva a program az adatbázisba menti a módosított adatokat.
-- A Back gombra kattintva az összes marveles szuperhőst listázó oldalra navigál vissza az alkalmazás.
+- A Back gombra kattintva az összes marveles karaktert listázó oldalra navigál vissza az alkalmazás.
 
 ---
 
 **4. agilis felhasználói történet:**
 
 > _A Delete ikonnal ellátott gombra kattintva 
-> egy marveles szuperhőst törölhetek a készítői adatbázisból._
+> egy marveles karaktert törölhetek a készítői adatbázisból._
 
 **Elfogadási kritérium:**  
-- A Delete gombra való kattintással az alkalmazás törli a szuperhős rekordját az adatbázisból.
-- Az adatbázisból való törlést követően az alkalmazás frissíti a listaoldalt, ahol a már törölt szuperhős nem lesz látható.
+- A Delete gombra való kattintással az alkalmazás törli a karakter rekordját az adatbázisból.
+- Az adatbázisból való törlést követően az alkalmazás frissíti a listaoldalt, ahol a már törölt karakter nem lesz látható.
 
 ---
 
