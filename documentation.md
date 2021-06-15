@@ -1,6 +1,3 @@
-# **User Story**
-
-
 ## **Szuperhősök Univerzuma - Universe of Superheroes**
 ---
 ---
@@ -404,6 +401,7 @@ magas
 **További fejlesztési lehetőségek:**  
 - A DC Univerzum hasonló aloldalainak elkészítése.
 - A főoldalon statisztikák elhelyezése.
+- Hibaüzenetek megjelenítése (validálás)
 - Az egyes aloldalakon statisztikák, kimutatások készítése a legfontosabb adatokból.
 - Az aloldalak lista nézete mellett kártya nézet kialakítása.
 - A szuperhősöket listázó aloldalon lapozó készítése.
