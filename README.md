@@ -12,7 +12,7 @@
 
 **Elfogadási kritérium:**  
 
-Egy mobiloptimalizált, látványos felületen a szuperhős meghatározása olvasható.
+Egy mobiloptimalizált, látványos felületen a szuperhős mint fogalom meghatározása olvasható (mi is a szuperhős, mitől válik szuperhőssé, milyen tulajdonságai lehetnek egy szuperhősnek, példaillusztráció).
 
 ---
 ---
@@ -319,7 +319,7 @@ magas
 
 **További fejlesztési lehetőségek:**  
 - A DC Univerzum hasonló aloldalainak elkészítése.
-- Hibaüzenetek megjelenítése (validálás)
+- Hibaüzenetek megjelenítése (validálás).
 - A főoldalon statisztikák elhelyezése.
 - Az egyes aloldalakon statisztikák, kimutatások készítése a legfontosabb adatokból.
 - Az aloldalak lista nézete mellett kártya nézet kialakítása.
