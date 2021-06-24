@@ -24,5 +24,16 @@ A megadott Docker container indítása és inicializálása.
 
 [Swagger](https://)
 
+---
+---
+
+## **Linkek:**  
+
+- [A User Story (adminisztrátori szerepkör) itt érhető el.](https://github.com/lasurrealista/universe-of-superheroes/blob/main/README.md)
+
+- [A kiegészítő anyagok itt érhetők el.](https://github.com/lasurrealista/universe-of-superheroes/blob/main/Developer%20Documentation%20-%20Supplementary%20Material/supplementary-material.md)
+
+
+
 
 
