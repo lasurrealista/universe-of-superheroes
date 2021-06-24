@@ -109,7 +109,7 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 > _A Marvel karakterek aloldalon megjelennek a marveles karakterek kifejezetten a készítők által lényegesnek tartott adatai._
 
 **Elfogadási kritérium:**  
-Az aloldal megjeleníti az összes marveles karakter adatait lista formátumban. Ezek az adatok a következők: azonosító, név, kép, a karakter marveles oldalára mutató link, hányszor tért vissza a szuperhős, jelenleg dolgoznak-e vele kapcsolatos történeteken.
+Az aloldal megjeleníti az összes marveles karakter adatait lista formátumban. Ezek az adatok a következők: azonosító, név, kép, a karakter marveles oldalára mutató link, hányszor tért vissza a szuperhős.
 
 ---
 
@@ -309,6 +309,20 @@ Az aloldal megjeleníti az összes marveles képregénykészítő adatait lista 
 ---
 ---
 
+## _**4. Bejelentkezési felület**_
+---
+
+**1. agilis felhasználói történet:**
+> _Az adminisztrációs felületre be lehet jelentkezni._
+
+**Elfogadási kritérium:**  
+
+- Az azonosító adatok megadásával be lehet jelentkezni a felületre.
+- A profil nélküli felhasználóknak lehetőségük van regisztrálni, hogy ezt követően bejelentkezhessenek.
+
+---
+---
+
 ## _A projekt egyéb adatai:_
 
 **Prioritás:**  
@@ -332,5 +346,9 @@ megjelenés | szem- és hajszín megadása |
 életrajzi adatok | teljes név, alteregók, aliasok, születési hely, kiadó |
 kapcsolatok | családi kapcsolatok
 
+---
+---
+
+[A dokumentáció itt érhető el.](https://github.com/lasurrealista/universe-of-superheroes/blob/main/documentation.md)
 
 

@@ -143,7 +143,6 @@ Ezek az adatok a következők:
 - thumbnail (kép)
 - url (a karakter marveles oldalára mutató link)
 - stories - returned (hányszor tért vissza)
-- active (jelenleg dolgoznak-e vele kapcsolatos történeteken)
 
 ---
 
@@ -413,5 +412,9 @@ appearance | szem- és hajszín megadása |
 biography | teljes név, alteregók, aliasok, születési hely, kiadó |
 connections | családi kapcsolatok
 
+---
+---
+
+[A User Story (adminisztrátori szerepkör) itt érhető el.](https://github.com/lasurrealista/universe-of-superheroes/blob/main/README.md)
 
 
