@@ -64,14 +64,14 @@ Az egyes aloldalakra az Angular routing segítségével lehet navigálni egy BS 
 ## _**2. Szuperhősök adatbázis**_
 ---
 
-**Osztály neve:** superheroes  
-**Osztály helye:** model/superheroes
+**Osztály neve:** superhero   
+**Osztály helye:** model/superhero
 
-**Service neve:** superheroes  
-**Osztály helye:** service/superheroes
+**Service neve:** superhero  
+**Osztály helye:** service/superhero
 
-**Komponens neve:** superheroes  
-**Komponens helye:** page/superheroes
+**Komponens neve:** superhero  
+**Komponens helye:** page/superhero
 
 Az oldalon megjelenik az összes szuperhős adata egy helyen.  
 
@@ -110,7 +110,7 @@ Mindkét szcenárió megvalósítása esetén a kártyás nézetben a List gombr
 **Update:**
 
 > _Az Update ikonnal ellátott gombra kattintva egy űrlap segítségével
-> a szuperhős adatai szerkeszthetők és menthetők el az adatbázisban._
+> a szuperhős adatai szerkeszthetők és menthetők az adatbázisban._
 
 - Az Update gombra való kattintással a szuperhős egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott szuperhős adatait lehet szerkeszthető mezők segítségével módosítani.
 - A Save gombra kattintva a program az adatbázisba menti a módosított adatokat.
@@ -148,8 +148,8 @@ Mindkét szcenárió megvalósítása esetén a kártyás nézetben a List gombr
 
 > _A lista oszlopainak fejlécére való kattintással növekvő és csökkenő sorrendbe rendezhetőek a szám típusú adatok, illetve abc-sorrendbe, valamint fordított abc-sorrendbe rendezhetőek a szöveges adatok._
 
-- A fejlécen található lefelé mutató nyíl ikonra kattintva az alkalmazás sorba rendezi a választott adatok szerint a entitásokat/dokumentumokat.
-- A fejlécen található felfelé mutató nyíl ikonra kattintva az alkalmazás fordított sorba rendezi a választott adatok szerint a entitásokat/dokumentumokat.
+- A fejlécen található lefelé mutató nyíl ikonra kattintva az alkalmazás sorba rendezi a választott adatok szerint az entitásokat.
+- A fejlécen található felfelé mutató nyíl ikonra kattintva az alkalmazás fordított sorba rendezi a választott adatok szerint az entitásokat.
 
 ---
 ---
@@ -165,14 +165,14 @@ _Megjegyzés:_ Az elérési útvonalban az aloldalak elnevezése előtt szerepel
 
 > _Az alkalmazás a Marvel karakterek aloldalra navigálva megjeleníti a marveles karakterek adatbázisban tárolt, kifejezetten a készítők által lényegesnek tartott adatait._
 
-**Osztály neve:** marvel-characters  
-**Osztály helye:** model/marvel-characters  
+**Osztály neve:** marvel-character  
+**Osztály helye:** model/marvel-character  
 
-**Service neve:** marvel-characters   
-**Osztály helye:** service/marvel-characters  
+**Service neve:** marvel-character   
+**Osztály helye:** service/marvel-character  
 
-**Komponens neve:** marvel-characters    
-**Komponens helye:** page/marvel-characters  
+**Komponens neve:** marvel-character    
+**Komponens helye:** page/marvel-character  
 
 Az aloldal megjeleníti az összes marveles karakter adatait lista formátumban.  
 
@@ -188,9 +188,9 @@ Ezek az adatok a következők:
 **Create:**
 
 > _A New Marvel Character gombra kattintva egy űrlap segítségével 
-> új marveles karakter adatai vehetők fel és menthetők el a készítői adatbázisban._
+> új marveles karakter adatai vehetők fel és menthetők a készítői adatbázisban._
 
-- A New Marvel Character gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles karakter adatait tudom input mezők segítségével bevinni.
+- A New Marvel Character gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles karakter adatait lehet input mezők segítségével bevinni.
 - A Save gombra kattintva a program az adatbázisba menti a megadott adatokat.
 - A Back gombra kattintva az összes marveles karaktert listázó oldalra navigál vissza az alkalmazás.
 
@@ -199,10 +199,10 @@ Ezek az adatok a következők:
 **Update:**
 
 > _Az Update ikonnal ellátott gombra kattintva egy űrlap segítségével
-> a marveles karakter adatait szerkeszthetem és menthetem el a készítői adatbázisban._
+> a marveles karakter adatai szerkeszthetők és menthetők a készítői adatbázisban._
 
 
-- Az Update gombra való kattintással a marveles karakter egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott karakter adatait tudom szerkeszthető mezők segítségével módosítani.
+- Az Update gombra való kattintással a marveles karakter egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott karakter adatait lehet szerkeszthető mezők segítségével módosítani.
 - A Save gombra kattintva a program az adatbázisba menti a módosított adatokat.
 - A Back gombra kattintva az összes marveles karaktert listázó oldalra navigál vissza az alkalmazás.
 
@@ -211,8 +211,7 @@ Ezek az adatok a következők:
 **Delete:**
 
 > _A Delete ikonnal ellátott gombra kattintva 
-> egy marveles karaktert törölhetek a készítői adatbázisból._
-
+> egy marveles karakter törölhető a készítői adatbázisból._
 
 - A Delete gombra való kattintással az alkalmazás törli a karakter entitását az adatbázisból.
 - Az adatbázisból való törlést követően az alkalmazás frissíti a listaoldalt, ahol a már törölt karakter nem lesz látható.
@@ -225,14 +224,14 @@ Ezek az adatok a következők:
 
 > _Az alkalmazás a Marvel képregények aloldalra navigálva megjeleníti a marveles képregények adatbázisban tárolt, kifejezetten a készítők által lényegesnek tartott adatait._
 
-**Osztály neve:** marvel-comics  
-**Osztály helye:** model/marvel-comics
+**Osztály neve:** marvel-comic  
+**Osztály helye:** model/marvel-comic
 
-**Service neve:** marvel-comics  
-**Osztály helye:** service/marvel-comics 
+**Service neve:** marvel-comic  
+**Osztály helye:** service/marvel-comic 
 
-**Komponens neve:** marvel-comics    
-**Komponens helye:** page/marvel-comics 
+**Komponens neve:** marvel-comic    
+**Komponens helye:** page/marvel-comic 
 
 Az aloldal megjeleníti az összes marveles képregény adatait lista formátumban.  
 
@@ -246,9 +245,9 @@ Ezek az adatok a következők:
 **Create:**
 
 > _A New Marvel Comic gombra kattintva egy űrlap segítségével 
-> új marveles képregény adatait vehetem fel és menthetem el a készítői adatbázisban._
+> új marveles képregény adatai vehetők fel és menthetők a készítői adatbázisban._
 
-- A New Marvel Comic gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles képregény adatait tudom input mezők segítségével bevinni.
+- A New Marvel Comic gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles képregény adatait lehet input mezők segítségével bevinni.
 - A Save gombra kattintva a program az adatbázisba menti a megadott adatokat.
 - A Back gombra kattintva az összes marveles képregényt listázó oldalra navigál vissza az alkalmazás.
 
@@ -257,10 +256,9 @@ Ezek az adatok a következők:
 **Update:**
 
 > _Az Update ikonnal ellátott gombra kattintva egy űrlap segítségével
-> a marveles képregény adatait szerkeszthetem és menthetem el a készítői adatbázisban._
+> a marveles képregény adatai szerkeszthetők és menthetők a készítői adatbázisban._
 
-
-- Az Update gombra való kattintással a marveles képregény egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott képregény adatait tudom szerkeszthető mezők segítségével módosítani.
+- Az Update gombra való kattintással a marveles képregény egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott képregény adatait lehet szerkeszthető mezők segítségével módosítani.
 - A Save gombra kattintva a program az adatbázisba menti a módosított adatokat.
 - A Back gombra kattintva az összes marveles képregényt listázó oldalra navigál vissza az alkalmazás.
 
@@ -269,8 +267,7 @@ Ezek az adatok a következők:
 **Delete:**
 
 > _A Delete ikonnal ellátott gombra kattintva 
-> egy marveles képregényt törölhetek a készítői adatbázisból._
-
+> egy marveles képregény törölhető a készítői adatbázisból._
 
 - A Delete gombra való kattintással az alkalmazás törli a képregény entitását az adatbázisból.
 - Az adatbázisból való törlést követően az alkalmazás frissíti a listaoldalt, ahol a már törölt képregény nem lesz látható.
@@ -283,14 +280,14 @@ Ezek az adatok a következők:
 
 > _Az alkalmazás a Marvel történetek aloldalra navigálva megjeleníti a nevezetes marveles történetek adatbázisban tárolt, kifejezetten a készítők által lényegesnek tartott adatait._
 
-**Osztály neve:** marvel-stories  
-**Osztály helye:** model/marvel-stories  
+**Osztály neve:** marvel-story  
+**Osztály helye:** model/marvel-story  
 
-**Service neve:** marvel-stories  
-**Osztály helye:** service/marvel-stories  
+**Service neve:** marvel-story  
+**Osztály helye:** service/marvel-story  
 
-**Komponens neve:** marvel-stories   
-**Komponens helye:** page/marvel-stories  
+**Komponens neve:** marvel-story   
+**Komponens helye:** page/marvel-story  
 
 Az aloldal megjeleníti az összes marveles történet adatait lista formátumban.  
 
@@ -305,9 +302,9 @@ Ezek az adatok a következők:
 **Create:**
 
 > _A New Marvel Story gombra kattintva egy űrlap segítségével 
-> új marveles történet adatait vehetem fel és menthetem el a készítői adatbázisban._
+> új marveles történet adatai vehetők fel és menthetők a készítői adatbázisban._
 
-- A New Marvel Story gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles történet adatait tudom input mezők segítségével bevinni.
+- A New Marvel Story gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles történet adatait lehet input mezők segítségével bevinni.
 - A Save gombra kattintva a program az adatbázisba menti a megadott adatokat.
 - A Back gombra kattintva az összes marveles történetet listázó oldalra navigál vissza az alkalmazás.
 
@@ -316,10 +313,9 @@ Ezek az adatok a következők:
 **Update:**
 
 > _Az Update ikonnal ellátott gombra kattintva egy űrlap segítségével
-> a marveles történet adatait szerkeszthetem és menthetem el a készítői adatbázisban._
+> a marveles történet adatai szerkeszthetők és menthetők a készítői adatbázisban._
 
-
-- Az Update gombra való kattintással a marveles történet egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott történet adatait tudom szerkeszthető mezők segítségével módosítani.
+- Az Update gombra való kattintással a marveles történet egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott történet adatait lehet szerkeszthető mezők segítségével módosítani.
 - A Save gombra kattintva a program az adatbázisba menti a módosított adatokat.
 - A Back gombra kattintva az összes marveles történetet listázó oldalra navigál vissza az alkalmazás.
 
@@ -328,8 +324,7 @@ Ezek az adatok a következők:
 **Delete:**
 
 > _A Delete ikonnal ellátott gombra kattintva 
-> egy marveles történetet törölhetek a készítői adatbázisból._
-
+> egy marveles történet törölhető a készítői adatbázisból._
 
 - A Delete gombra való kattintással az alkalmazás törli a történet entitását az adatbázisból.
 - Az adatbázisból való törlést követően az alkalmazás frissíti a listaoldalt, ahol a már törölt történet nem lesz látható.
@@ -341,14 +336,14 @@ Ezek az adatok a következők:
 
 > _Az alkalmazás a Marvel események aloldalra navigálva megjeleníti a nevezetes marveles események adatbázisban tárolt, kifejezetten a készítők által lényegesnek tartott adatait._
 
-**Osztály neve:** marvel-events  
-**Osztály helye:** model/marvel-events  
+**Osztály neve:** marvel-event  
+**Osztály helye:** model/marvel-event  
 
-**Service neve:** marvel-events   
-**Osztály helye:** service/marvel-events  
+**Service neve:** marvel-event   
+**Osztály helye:** service/marvel-event  
 
-**Komponens neve:** marvel-events  
-**Komponens helye:** page/marvel-events  
+**Komponens neve:** marvel-event  
+**Komponens helye:** page/marvel-event  
 
 Az aloldal megjeleníti az összes marveles esemény adatait lista formátumban.  
 
@@ -365,9 +360,9 @@ Ezek az adatok a következők:
 **Create:**
 
 > _A New Marvel Event gombra kattintva egy űrlap segítségével 
-> új marveles történet adatait vehetem fel és menthetem el a készítői adatbázisban._
+> új marveles történet adatai vehetők fel és menthetők a készítői adatbázisban._
 
-- A New Marvel Event gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles esemény adatait tudom input mezők segítségével bevinni.
+- A New Marvel Event gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles esemény adatait lehet input mezők segítségével bevinni.
 - A Save gombra kattintva a program az adatbázisba menti a megadott adatokat.
 - A Back gombra kattintva az összes marveles eseményt listázó oldalra navigál vissza az alkalmazás.
 
@@ -376,10 +371,9 @@ Ezek az adatok a következők:
 **Update:**
 
 > _Az Update ikonnal ellátott gombra kattintva egy űrlap segítségével
-> a marveles esemény adatait szerkeszthetem és menthetem el a készítői adatbázisban._
+> a marveles esemény adatai szerkeszthetők és menthetők a készítői adatbázisban._
 
-
-- Az Update gombra való kattintással a marveles esemény egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott esemény adatait tudom szerkeszthető mezők segítségével módosítani.
+- Az Update gombra való kattintással a marveles esemény egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott esemény adatait lehet szerkeszthető mezők segítségével módosítani.
 - A Save gombra kattintva a program az adatbázisba menti a módosított adatokat.
 - A Back gombra kattintva az összes marveles eseményt listázó oldalra navigál vissza az alkalmazás.
 
@@ -388,8 +382,7 @@ Ezek az adatok a következők:
 **Delete:**
 
 > _A Delete ikonnal ellátott gombra kattintva 
-> egy marveles eseményt törölhetek a készítői adatbázisból._
-
+> egy marveles esemény törölhető a készítői adatbázisból._
 
 - A Delete gombra való kattintással az alkalmazás törli az esemény entitását az adatbázisból.
 - Az adatbázisból való törlést követően az alkalmazás frissíti a listaoldalt, ahol a már törölt esemény nem lesz látható.
@@ -400,14 +393,14 @@ Ezek az adatok a következők:
 
 > _Az alkalmazás a Marvel készítők aloldalra navigálva megjeleníti a marveles képregénykészítők adatbázisban tárolt adatait._
 
-**Osztály neve:** marvel-creators  
-**Osztály helye:** model/marvel-creators 
+**Osztály neve:** marvel-creator  
+**Osztály helye:** model/marvel-creator 
 
-**Service neve:** marvel-creators   
-**Osztály helye:** service/marvel-creators
+**Service neve:** marvel-creator   
+**Osztály helye:** service/marvel-creator
 
-**Komponens neve:** marvel-creators  
-**Komponens helye:** page/marvel-creators 
+**Komponens neve:** marvel-creator  
+**Komponens helye:** page/marvel-creator 
 
 Az aloldal megjeleníti az összes marveles képregénykészítő adatait lista formátumban.  
 
@@ -424,9 +417,9 @@ Ezek az adatok a következők:
 **Create:**
 
 > _A New Marvel Creator gombra kattintva egy űrlap segítségével 
-> új marveles képregénykészítő adatait vehetem fel és menthetem el a készítői adatbázisban._
+> új marveles képregénykészítő adatai vehetők fel és menthetők a készítői adatbázisban._
 
-- A New Marvel Creator gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles képregénykészítő adatait tudom input mezők segítségével bevinni.
+- A New Marvel Creator gombra való kattintással egy új oldal nyílik meg, ahol egy új marveles képregénykészítő adatait lehet input mezők segítségével bevinni.
 - A Save gombra kattintva a program az adatbázisba menti a megadott adatokat.
 - A Back gombra kattintva az összes marveles képregénykészítőt listázó oldalra navigál vissza az alkalmazás.
 
@@ -435,10 +428,9 @@ Ezek az adatok a következők:
 **Update:**
 
 > _Az Update ikonnal ellátott gombra kattintva egy űrlap segítségével
-> a marveles képregénykészítő adatait szerkeszthetem és menthetem el a készítői adatbázisban._
+> a marveles képregénykészítő adatai szerkeszthetők és menthetők a készítői adatbázisban._
 
-
-- Az Update gombra való kattintással a marveles képregénykészítő egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott képregénykészítő adatait tudom szerkeszthető mezők segítségével módosítani.
+- Az Update gombra való kattintással a marveles képregénykészítő egyedi adatait tartalmazó aloldal nyílik meg, ahol a választott képregénykészítő adatait lehet szerkeszthető mezők segítségével módosítani.
 - A Save gombra kattintva a program az adatbázisba menti a módosított adatokat.
 - A Back gombra kattintva az összes marveles képregénykészítőt listázó oldalra navigál vissza az alkalmazás.
 
@@ -447,7 +439,7 @@ Ezek az adatok a következők:
 **Delete:**
 
 > _A Delete ikonnal ellátott gombra kattintva 
-> egy marveles képregénykészítő adatait törölhetem az adatbázisból._
+> egy marveles képregénykészítő adatai törölhetők az adatbázisból._
 
 - A Delete gombra való kattintással az alkalmazás törli a képregénykészítő entitását az adatbázisból.
 - Az adatbázisból való törlést követően az alkalmazás frissíti a listaoldalt, ahol a már törölt képregénykészítő adatai nem lesz láthatóak.
@@ -472,6 +464,9 @@ connections | családi kapcsolatok
 ---
 ---
 
-[A User Story (adminisztrátori szerepkör) itt érhető el.](https://github.com/lasurrealista/universe-of-superheroes/blob/main/README.md)
+## **Linkek:**  
 
+- [A User Story (adminisztrátori szerepkör) itt érhető el.](https://github.com/lasurrealista/universe-of-superheroes/blob/main/README.md)
+
+- [A dokumentáció itt érhető el.](https://github.com/lasurrealista/universe-of-superheroes/blob/main/DOCUMENTATION.md)
 
