@@ -1,0 +1,24 @@
+@use '../../../assets/modules/colors' as *;
+
+.navbar-brand {
+  color: $secondary-color;
+
+  &:hover {
+    color: $primary-color;
+    }
+}
+
+.navbar-nav > li {
+
+  .dropdown-menu {
+    background-color: $secondary-color;
+  }
+
+  a.login {
+    color: $secondary-color;
+    }
+
+  a.login:hover {
+    color: $primary-color;
+    }
+}

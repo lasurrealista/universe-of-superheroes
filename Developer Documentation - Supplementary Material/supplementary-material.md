@@ -71,7 +71,7 @@ Az egyes aloldalakra az Angular routing segítségével lehet navigálni egy BS 
 **Osztály helye:** service/superhero
 
 **Komponens neve:** superhero  
-**Komponens helye:** page/superhero
+**Komponens helye:** page/superheroes
 
 Az oldalon megjelenik az összes szuperhős adata egy helyen.  
 
@@ -172,7 +172,7 @@ _Megjegyzés:_ Az elérési útvonalban az aloldalak elnevezése előtt szerepel
 **Osztály helye:** service/marvel-character  
 
 **Komponens neve:** marvel-character    
-**Komponens helye:** page/marvel-character  
+**Komponens helye:** page/marvel-characters  
 
 Az aloldal megjeleníti az összes marveles karakter adatait lista formátumban.  
 
@@ -231,7 +231,7 @@ Ezek az adatok a következők:
 **Osztály helye:** service/marvel-comic 
 
 **Komponens neve:** marvel-comic    
-**Komponens helye:** page/marvel-comic 
+**Komponens helye:** page/marvel-comics 
 
 Az aloldal megjeleníti az összes marveles képregény adatait lista formátumban.  
 
@@ -287,7 +287,7 @@ Ezek az adatok a következők:
 **Osztály helye:** service/marvel-story  
 
 **Komponens neve:** marvel-story   
-**Komponens helye:** page/marvel-story  
+**Komponens helye:** page/marvel-stories  
 
 Az aloldal megjeleníti az összes marveles történet adatait lista formátumban.  
 
@@ -343,7 +343,7 @@ Ezek az adatok a következők:
 **Osztály helye:** service/marvel-event  
 
 **Komponens neve:** marvel-event  
-**Komponens helye:** page/marvel-event  
+**Komponens helye:** page/marvel-events  
 
 Az aloldal megjeleníti az összes marveles esemény adatait lista formátumban.  
 
@@ -400,7 +400,7 @@ Ezek az adatok a következők:
 **Osztály helye:** service/marvel-creator
 
 **Komponens neve:** marvel-creator  
-**Komponens helye:** page/marvel-creator 
+**Komponens helye:** page/marvel-creators
 
 Az aloldal megjeleníti az összes marveles képregénykészítő adatait lista formátumban.  
 
