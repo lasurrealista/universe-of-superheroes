@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './common/navigation/navigation.component';
 import { HomeComponent } from './page/home/home.component';
 import { SuperheroesComponent } from './page/superheroes/superheroes.component';
+import { DataTableComponent } from './common/data-table/data-table.component';
+import { XPipePipe } from './pipe/x-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     HomeComponent,
-    SuperheroesComponent
+    SuperheroesComponent,
+    DataTableComponent,
+    XPipePipe
   ],
   imports: [
     BrowserModule,

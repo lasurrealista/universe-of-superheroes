@@ -1,0 +1,15 @@
+@use '../../../assets/modules/colors'as *;
+
+.container-fluid {
+  background-color: $primary-color;
+  height: 100vh;
+}
+
+th {
+  color: $secondary-color;
+  user-select: none;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
