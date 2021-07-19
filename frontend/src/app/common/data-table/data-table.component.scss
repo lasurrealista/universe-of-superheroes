@@ -1,0 +1,10 @@
+@use '../../../assets/modules/colors'as *;
+
+th {
+  color: $secondary-color;
+  user-select: none;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
