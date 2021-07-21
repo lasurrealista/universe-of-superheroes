@@ -109,7 +109,7 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 > _A Marvel karakterek aloldalon megjelennek a marveles karakterek kifejezetten a készítők által lényegesnek tartott adatai._
 
 **Elfogadási kritérium:**  
-Az aloldal megjeleníti az összes marveles karakter adatait lista formátumban. Ezek az adatok a következők: azonosító, név, kép, a karakter marveles oldalára mutató link, hányszor tért vissza a szuperhős.
+Az aloldal megjeleníti az összes marveles karakter adatait lista formátumban. Ezek az adatok a következők: azonosító, név, kép, a karakter marveles oldalára mutató link, melyik képregényekben szerepelt, hányszor tért vissza a szuperhős.
 
 ---
 
@@ -274,7 +274,7 @@ Az aloldal megjeleníti az összes marveles esemény adatait lista formátumban.
 > _A Marvel készítők aloldalon megjelennek a marveles képregénykészítők adatbázisban tárolt adatai._
 
 **Elfogadási kritérium:**  
-Az aloldal megjeleníti az összes marveles képregénykészítő adatait lista formátumban. Ezek az adatok a következők: azonosító, név, kép, elérhető képregények száma, képregények címe, a készítő marveles oldalára mutató link.
+Az aloldal megjeleníti az összes marveles képregénykészítő adatait lista formátumban. Ezek az adatok a következők: azonosító, név, kép, elérhető képregények száma, a készítő marveles oldalára mutató link.
 
 ---
 

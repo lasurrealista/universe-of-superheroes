@@ -58,6 +58,7 @@ Az egyes aloldalakra az Angular routing segítségével lehet navigálni egy BS 
 - A Marvel Stories menügombra kattintva az alkalmazás a Marvel történetek aloldalra navigálva megjeleníti a marveles történetek adatbázisban tárolt adatait.
 - A Marvel Events menügombra kattintva az alkalmazás a Marvel események aloldalra navigálva megjeleníti a marveles univerzum legjelentősebb szuperhősöket érintő eseményeinek adatbázisban tárolt adatait.
 - A Marvel Creators menügombra kattintva az alkalmazás a Marvel képregények készítői aloldalra navigálva megjeleníti a marveles univerzum készítőinek adatbázisban tárolt adatait.
+- A Login menügombra kattintva a bejelentkezőoldalra navigál az alkalmazás.
 
 ---
 ---
@@ -180,7 +181,8 @@ Ezek az adatok a következők:
 - id (azonosító)
 - name (név)
 - thumbnail (kép)
-- url (a karakter marveles oldalára mutató link)
+- profile (a karakter marveles oldalára mutató link)
+- url (melyik képregényekben szerepelt)
 - stories - returned (hányszor tért vissza)
 
 ---
@@ -409,7 +411,6 @@ Ezek az adatok a következők:
 - fullName (név)
 - thumbnail (kép)
 - comics - available (elérhető képregények száma)
-- comics - items - name (képregények címe)
 - url (a készítő marveles oldalára mutató link)
 
 ---
@@ -443,6 +444,20 @@ Ezek az adatok a következők:
 
 - A Delete gombra való kattintással az alkalmazás törli a képregénykészítő entitását az adatbázisból.
 - Az adatbázisból való törlést követően az alkalmazás frissíti a listaoldalt, ahol a már törölt képregénykészítő adatai nem lesz láthatóak.
+---
+---
+
+## _**4. Bejelentkezési felület**_
+---
+
+**1. agilis felhasználói történet:**
+> _Az adminisztrációs felületre be lehet jelentkezni._
+
+**Elfogadási kritérium:**  
+
+- Az azonosító adatok megadásával be lehet jelentkezni a felületre.
+- A profil nélküli felhasználóknak lehetőségük van regisztrálni, hogy ezt követően bejelentkezhessenek.
+
 ---
 ---
 
