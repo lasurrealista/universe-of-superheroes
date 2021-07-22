@@ -60,6 +60,15 @@ export class ConfigService {
       "xs"]]},
   ];
 
+  marvelCharacterColumns: ITableColumn[] = [
+    {key: "_id", title: "#"},
+    {key: "name", title: "Name"},
+    {key: "thumbnail", title: "Image"},
+    {key: "profile", title: "Profile"},
+    {key: "url", title: "Home Page"},
+    {key: "stories", title: "Stories"}
+  ];
+
   constructor() { }
 
   // row.customer.name => (row, 'customer.name')

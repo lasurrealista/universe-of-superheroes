@@ -6,7 +6,7 @@ import { ConfigService } from './config.service';
 @Injectable({
   providedIn: 'root'
 })
-export class BaseService<T extends { _id: string }> {
+export class BaseService<T extends { _id: string | number }> {
 
   entity: string = '';
 
