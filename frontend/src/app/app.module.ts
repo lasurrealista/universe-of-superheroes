@@ -10,6 +10,11 @@ import { HomeComponent } from './page/home/home.component';
 import { SuperheroesComponent } from './page/superheroes/superheroes.component';
 import { DataTableComponent } from './common/data-table/data-table.component';
 import { XPipePipe } from './pipe/x-pipe.pipe';
+import { MarvelCharactersComponent } from './page/marvel-characters/marvel-characters.component';
+import { MarvelComicsComponent } from './page/marvel-comics/marvel-comics.component';
+import { MarvelStoriesComponent } from './page/marvel-stories/marvel-stories.component';
+import { MarvelEventsComponent } from './page/marvel-events/marvel-events.component';
+import { MarvelCreatorsComponent } from './page/marvel-creators/marvel-creators.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { XPipePipe } from './pipe/x-pipe.pipe';
     HomeComponent,
     SuperheroesComponent,
     DataTableComponent,
-    XPipePipe
+    XPipePipe,
+    MarvelCharactersComponent,
+    MarvelComicsComponent,
+    MarvelStoriesComponent,
+    MarvelEventsComponent,
+    MarvelCreatorsComponent
   ],
   imports: [
     BrowserModule,
