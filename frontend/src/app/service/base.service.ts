@@ -6,7 +6,7 @@ import { ConfigService } from './config.service';
 @Injectable({
   providedIn: 'root'
 })
-export class BaseService<T> {
+export class BaseService<T extends { _id: string }> {
 
   entity: string = '';
 
@@ -21,5 +21,17 @@ export class BaseService<T> {
 
   get(_id: string): Observable<T> {
     return this.http.get<T>(`${this.config.apiUrl}${this.entity}/${_id}`);
+  }
+
+  create(entity: T): Observable<T> {
+    return this.http.post<T>(`${this.config.apiUrl}/${this.entity}`, entity);
+  }
+
+  update(entity: T): Observable<T> {
+    return this.http.patch<T>(`${this.config.apiUrl}/${this.entity}/${entity._id}`, entity);
+  }
+
+  delete(_id: string): Observable<T> {
+    return this.http.delete<T>(`${this.config.apiUrl}/${this.entity}/${_id}`);
   }
 }
