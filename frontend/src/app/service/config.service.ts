@@ -94,6 +94,12 @@ export class ConfigService {
     {key: "url", title: "Event Homepage"}
   ];
 
+  marvelStoryColumns: ITableColumn[] = [
+    {key: "_id", title: "#"},
+    {key: "name", title: "Name"},
+    {key: "title", title: "Description"},
+  ];
+
   constructor() { }
 
   // row.customer.name => (row, 'customer.name')

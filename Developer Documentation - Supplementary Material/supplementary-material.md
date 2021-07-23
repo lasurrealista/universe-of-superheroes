@@ -297,7 +297,6 @@ Ezek az adatok a következők:
 - id (azonosító)
 - name (név)
 - title (rövid alcím, leírás)
-- url (a történet oldalára mutató link - letiltva, csak a rendszergazda fér hozzá)
 
 ---
 

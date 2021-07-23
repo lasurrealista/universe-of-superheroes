@@ -192,7 +192,7 @@ Az aloldal megjeleníti az összes marveles képregény adatait lista formátumb
 > _A Marvel történetek aloldalon megjelennek a nevezetes marveles történetek kifejezetten a készítők által lényegesnek tartott adatai._
 
 **Elfogadási kritérium:**  
-Az aloldal megjeleníti az összes marveles történet adatait lista formátumban. Ezek az adatok a következők: azonosító, név, rövid alcím, leírás, a történet oldalára mutató link.
+Az aloldal megjeleníti az összes marveles történet adatait lista formátumban. Ezek az adatok a következők: azonosító, név, rövid alcím, leírás.
 
 ---
 
