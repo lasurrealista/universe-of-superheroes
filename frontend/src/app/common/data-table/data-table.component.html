@@ -24,6 +24,18 @@
             <span *ngIf="col.htmlOutput" [innerHTML]="col.htmlOutput(row[col.key])">
             </span>-->
           </td>
+          <td>
+            <div class="btn-group">
+              <button [routerLink]="[row._id]" class="btn btn-info">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button (click)="onDelete(row)"
+              class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </td>
+
         </tr>
       </tbody>
     </table>

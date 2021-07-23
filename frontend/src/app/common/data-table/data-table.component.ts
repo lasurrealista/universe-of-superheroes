@@ -11,12 +11,17 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
 
   @Input() tableColumns: ITableColumn[] = [];
   @Input() list$: Observable<T[]> | null = null;
+  baseService: any;
 
   constructor(
     private config: ConfigService,
   ) { }
 
   ngOnInit(): void {
+  }
+
+  onDelete(entity: T): void {
+    this.baseService.remove(entity);
   }
 
 }
