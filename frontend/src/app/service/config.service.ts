@@ -77,6 +77,14 @@ export class ConfigService {
     {key: "url", title: "Homepage"}
   ];
 
+  marvelCreatorColumns: ITableColumn[] = [
+    {key: "_id", title: "#"},
+    {key: "fullName", title: "Full Name"},
+    {key: "thumbnail", title: "Image"},
+    {key: "comics - available", title: "Available Comics"},
+    {key: "url", title: "Comics"}
+  ];
+
   constructor() { }
 
   // row.customer.name => (row, 'customer.name')
