@@ -65,8 +65,16 @@ export class ConfigService {
     {key: "name", title: "Name"},
     {key: "thumbnail", title: "Image"},
     {key: "profile", title: "Profile"},
-    {key: "url", title: "Home Page"},
+    {key: "url", title: "Homepage"},
     {key: "stories", title: "Stories"}
+  ];
+
+  marvelComicColumns: ITableColumn[] = [
+    {key: "_id", title: "#"},
+    {key: "thumbnail", title: "Image"},
+    {key: "title", title: "Title"},
+    {key: "pageCount", title: "Page Count"},
+    {key: "url", title: "Homepage"}
   ];
 
   constructor() { }
