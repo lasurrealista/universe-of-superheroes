@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { MarvelEvent } from 'src/app/model/marvel-event';
+import { ConfigService, ITableColumn } from 'src/app/service/config.service';
+import { MarvelEventService } from 'src/app/service/marvel-event.service';
 
 @Component({
   selector: 'app-marvel-events',
@@ -7,7 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelEventsComponent implements OnInit {
 
-  constructor() { }
+  tableColumns: ITableColumn[] = this.config.marvelEventColumns;
+  list$: Observable<MarvelEvent[]> = this.marvelEventService.getAll();
+
+  constructor(
+    private config: ConfigService,
+    private marvelEventService: MarvelEventService,
+    ) { }
 
   ngOnInit(): void {
   }
