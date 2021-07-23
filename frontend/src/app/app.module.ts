@@ -22,6 +22,7 @@ import { MarvelEventEditorComponent } from './page/marvel-event-editor/marvel-ev
 import { MarvelCreatorEditorComponent } from './page/marvel-creator-editor/marvel-creator-editor.component';
 import { MarvelComicEditorComponent } from './page/marvel-comic-editor/marvel-comic-editor.component';
 import { MarvelCharacterEditorComponent } from './page/marvel-character-editor/marvel-character-editor.component';
+import { SuperheroesCardsComponent } from './page/superheroes-cards/superheroes-cards.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MarvelCharacterEditorComponent } from './page/marvel-character-editor/m
     MarvelEventEditorComponent,
     MarvelCreatorEditorComponent,
     MarvelComicEditorComponent,
-    MarvelCharacterEditorComponent
+    MarvelCharacterEditorComponent,
+    SuperheroesCardsComponent
   ],
   imports: [
     BrowserModule,

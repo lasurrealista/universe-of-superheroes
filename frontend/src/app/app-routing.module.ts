@@ -14,6 +14,7 @@ import { MarvelComicEditorComponent } from './page/marvel-comic-editor/marvel-co
 import { MarvelCreatorEditorComponent } from './page/marvel-creator-editor/marvel-creator-editor.component';
 import { MarvelEventEditorComponent } from './page/marvel-event-editor/marvel-event-editor.component';
 import { MarvelStoryEditorComponent } from './page/marvel-story-editor/marvel-story-editor.component';
+import { SuperheroesCardsComponent } from './page/superheroes-cards/superheroes-cards.component';
 
 const routes: Routes = [
   {
@@ -67,6 +68,10 @@ const routes: Routes = [
   {
     path: 'marvel-universe/marvel-stories/:id',
     component: MarvelStoryEditorComponent,
+  },
+  {
+    path: 'superheroes-cards',
+    component: SuperheroesCardsComponent,
   },
   {
     path: '**',

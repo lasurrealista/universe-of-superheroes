@@ -1,0 +1,37 @@
+<div class="text-center pt-4">
+  <button class="btn btn-primary btn-lg" routerLink="/superheroes">Get the list</button>
+</div>
+<h1 class="text-center h2 pt-4">Superheroes</h1>
+<div class="row mx-4">
+  <div *ngFor="let superhero of list$ | async" class="card-group col-md-6 col-lg-4 col-xl-3">
+    <div class="card my-4">
+      <img class="card-img-top" src="{{ superhero.images.md }}" alt="{{ superhero.name }}" />
+      <div class="card-body">
+        <h5 class="card-title text-center mb-2">{{ superhero.name }}</h5>
+        <div class="card-text">
+          <div>
+            <div class="text-center">{{ superhero.slug }}</div>
+            <div class="mt-2">
+              <strong>Powerstats:</strong>
+            </div>
+            Intelligence: {{ superhero.powerstats.intelligence }}
+            <br>
+            Strength: {{ superhero.powerstats.intelligence }}
+            <br>
+            Speed: {{ superhero.powerstats.intelligence }}
+            <br>
+            Power: {{ superhero.powerstats.intelligence }}
+            <br>
+            Combat: {{ superhero.powerstats.intelligence }}
+            <div class="mt-2">
+              <strong>Occupation:</strong> {{ superhero.work.occupation }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer text-center ">
+        <small class="text-muted"><strong>{{ superhero.biography.publisher }}</strong></small>
+      </div>
+    </div>
+  </div>
+</div>
