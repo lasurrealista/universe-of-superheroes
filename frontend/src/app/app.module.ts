@@ -16,6 +16,12 @@ import { MarvelStoriesComponent } from './page/marvel-stories/marvel-stories.com
 import { MarvelEventsComponent } from './page/marvel-events/marvel-events.component';
 import { MarvelCreatorsComponent } from './page/marvel-creators/marvel-creators.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { SuperheroEditorComponent } from './page/superhero-editor/superhero-editor.component';
+import { MarvelStoryEditorComponent } from './page/marvel-story-editor/marvel-story-editor.component';
+import { MarvelEventEditorComponent } from './page/marvel-event-editor/marvel-event-editor.component';
+import { MarvelCreatorEditorComponent } from './page/marvel-creator-editor/marvel-creator-editor.component';
+import { MarvelComicEditorComponent } from './page/marvel-comic-editor/marvel-comic-editor.component';
+import { MarvelCharacterEditorComponent } from './page/marvel-character-editor/marvel-character-editor.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { FooterComponent } from './common/footer/footer.component';
     MarvelStoriesComponent,
     MarvelEventsComponent,
     MarvelCreatorsComponent,
-    FooterComponent
+    FooterComponent,
+    SuperheroEditorComponent,
+    MarvelStoryEditorComponent,
+    MarvelEventEditorComponent,
+    MarvelCreatorEditorComponent,
+    MarvelComicEditorComponent,
+    MarvelCharacterEditorComponent
   ],
   imports: [
     BrowserModule,
