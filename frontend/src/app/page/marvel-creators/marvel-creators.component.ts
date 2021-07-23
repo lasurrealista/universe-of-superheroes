@@ -11,6 +11,10 @@ import { MarvelCreatorService } from 'src/app/service/marvel-creator.service';
 })
 export class MarvelCreatorsComponent implements OnInit {
 
+  copyright: string = 'Data provided by Marvel. © 2014 Marvel';
+  url: string = 'https://www.marvel.com/comics/creators';
+  linkText: string = 'Marvel Creators';
+
   tableColumns: ITableColumn[] = this.config.marvelCreatorColumns;
   list$: Observable<MarvelCreator[]> = this.marvelCreatorService.getAll();
 

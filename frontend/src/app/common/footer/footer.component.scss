@@ -1,0 +1,5 @@
+@use '../../../assets/modules/colors' as *;
+
+.copyright, a {
+  color: $secondary-color;
+}

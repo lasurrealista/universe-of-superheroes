@@ -11,7 +11,7 @@ import { ITableColumn, ConfigService } from 'src/app/service/config.service';
 })
 export class SuperheroesComponent implements OnInit {
 
-  //superheroes: Observable<Superhero[]> = this.superheroService.getAll();
+  copyright: string = 'Data provided by SuperHero API';
 
   tableColumns: ITableColumn[] = this.config.superheroColumns;
   list$: Observable<Superhero[]> = this.superheroService.getAll();

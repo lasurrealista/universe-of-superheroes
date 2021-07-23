@@ -1,7 +1,10 @@
 <div class="container-fluid px-4">
   <h1 class="text-center h2 pt-4">Marvel Comics</h1>
-  <app-data-table
-  [tableColumns]="tableColumns"
-  [list$]="list$">
-</app-data-table>
+  <app-data-table [tableColumns]="tableColumns" [list$]="list$">
+  </app-data-table>
 </div>
+<app-footer
+  [copyright]="copyright"
+  [url]="url"
+  [linkText]="linkText"
+> </app-footer>

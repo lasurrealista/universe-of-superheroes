@@ -11,6 +11,10 @@ import { MarvelComicService } from 'src/app/service/marvel-comic.service';
 })
 export class MarvelComicsComponent implements OnInit {
 
+  copyright: string = 'Data provided by Marvel. © 2014 Marvel';
+  url: string = 'https://www.marvel.com/comics';
+  linkText: string = 'Marvel Comics';
+
   tableColumns: ITableColumn[] = this.config.marvelComicColumns;
   list$: Observable<MarvelComic[]> = this.marvelComicService.getAll();
 

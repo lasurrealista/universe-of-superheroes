@@ -15,6 +15,7 @@ import { MarvelComicsComponent } from './page/marvel-comics/marvel-comics.compon
 import { MarvelStoriesComponent } from './page/marvel-stories/marvel-stories.component';
 import { MarvelEventsComponent } from './page/marvel-events/marvel-events.component';
 import { MarvelCreatorsComponent } from './page/marvel-creators/marvel-creators.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MarvelCreatorsComponent } from './page/marvel-creators/marvel-creators.
     MarvelComicsComponent,
     MarvelStoriesComponent,
     MarvelEventsComponent,
-    MarvelCreatorsComponent
+    MarvelCreatorsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
