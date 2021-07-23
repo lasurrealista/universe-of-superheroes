@@ -47,51 +47,60 @@ export class ConfigService {
       "publisher",
     ]]},
     {key: "work", title: "Work (occupation, base)",
-      pipes: [ConfigService.getSubProperty],
+      pipes: [ConfigService.getSubProperty, ConfigService.cutLongString],
       pipeArgs: [[
         "occupation",
-        "base"]]},
+        "base"], [0, 100]]},
     {key: "connections", title: "Relatives",
-      pipes: [ConfigService.getSubProperty],
-      pipeArgs: [["relatives"]]},
+      pipes: [ConfigService.getSubProperty, ConfigService.cutLongString],
+      pipeArgs: [["relatives"], [0, 100]]},
     {key: "images", title: "Image",
-      pipes: [ConfigService.getSubProperty],
-      pipeArgs: [[
-      "xs"]]},
+      pipes: [ConfigService.getSubProperty, ConfigService.cutLongString],
+      pipeArgs: [["xs"], [0, 20]]},
   ];
 
   marvelCharacterColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
     {key: "name", title: "Name"},
-    {key: "thumbnail", title: "Image"},
-    {key: "profile", title: "Profile"},
-    {key: "url", title: "Homepage"},
+    {key: "thumbnail", title: "Image", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 25]]},
+    {key: "profile", title: "Profile", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 25]]},
+    {key: "url", title: "Homepage", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 25]]},
     {key: "stories", title: "Stories"}
   ];
 
   marvelComicColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
-    {key: "thumbnail", title: "Image"},
+    {key: "thumbnail", title: "Image", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 25]]},
     {key: "title", title: "Title"},
     {key: "pageCount", title: "Page Count"},
-    {key: "url", title: "Homepage"}
+    {key: "url", title: "Homepage", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 25]]}
   ];
 
   marvelCreatorColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
     {key: "fullName", title: "Full Name"},
-    {key: "thumbnail", title: "Image"},
+    {key: "thumbnail", title: "Image", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 25]]},
     {key: "comics - available", title: "Available Comics"},
-    {key: "url", title: "Comics"}
+    {key: "url", title: "Comics", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 28]]}
   ];
 
   marvelEventColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
-    {key: "thumbnail", title: "Image"},
+    {key: "thumbnail", title: "Image", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 25]]},
     {key: "title", title: "Title"},
-    {key: "description", title: "Description"},
+    {key: "description", title: "Description", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 200]]},
     {key: "modified", title: "Modified"},
-    {key: "url", title: "Event Homepage"}
+    {key: "url", title: "Event Homepage", pipes: [ConfigService.cutLongString],
+    pipeArgs: [[0, 25]]}
   ];
 
   marvelStoryColumns: ITableColumn[] = [
@@ -105,5 +114,14 @@ export class ConfigService {
   // row.customer.name => (row, 'customer.name')
   static getSubProperty(obj: any, ...keys: string[]): string | number | boolean | undefined {
     return keys.map( key => get(obj, key) ).join(', ');
+  }
+
+  static cutLongString(
+    data: string,
+    start: number,
+    end: number,
+    curve: string = '...'
+  ): string {
+    return data.slice(start, end) + curve;
   }
 }
