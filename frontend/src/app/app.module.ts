@@ -23,6 +23,7 @@ import { MarvelCreatorEditorComponent } from './page/marvel-creator-editor/marve
 import { MarvelComicEditorComponent } from './page/marvel-comic-editor/marvel-comic-editor.component';
 import { MarvelCharacterEditorComponent } from './page/marvel-character-editor/marvel-character-editor.component';
 import { SuperheroesCardsComponent } from './page/superheroes-cards/superheroes-cards.component';
+import { FilterPipePipe } from './pipe/filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { SuperheroesCardsComponent } from './page/superheroes-cards/superheroes-
     MarvelCreatorEditorComponent,
     MarvelComicEditorComponent,
     MarvelCharacterEditorComponent,
-    SuperheroesCardsComponent
+    SuperheroesCardsComponent,
+    FilterPipePipe
   ],
   imports: [
     BrowserModule,
