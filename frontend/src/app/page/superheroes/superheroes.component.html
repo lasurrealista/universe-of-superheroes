@@ -1,11 +1,134 @@
 <div class="container-fluid px-4">
+
+  <div class="filter pt-4">
+    <select [(ngModel)]="filterKey" class="form-control select-css">
+      <option *ngFor="let col of tableColumns" [value]="col.key">
+        {{ col.title }}
+      </option>
+    </select>
+    </div>
+    <div class="col-12 mt-2">
+      <form class="form-inline my-2 my-lg-0 py-2 d-flex justify-content-center">
+        <input
+          (keyup)="searchEvent($event)"
+          class="search-input form-control mr-sm-2"
+          type="text"
+          placeholder="Enter some text..."
+        />
+        <button class="btn btn-search my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
+
   <div class="text-center pt-4">
-    <button class="btn btn-primary btn-lg" routerLink="/superheroes-cards">Let's see them</button>
+    <button class="btn btn-primary btn-lg" routerLink="/superheroes-cards">
+      Let's see them
+    </button>
   </div>
   <h1 class="text-center h2 pt-4">Superheroes</h1>
-  <app-data-table [tableColumns]="tableColumns" [list$]="list$">
-  </app-data-table>
-  <h2 class="h6 pl-4 pb-4">
+  <!--<app-data-table [tableColumns]="tableColumns" [list$]="list$">
+  </app-data-table>-->
+
+  <div class="row mt-2">
+    <div class="col-12">
+      <nav class="d-flex justify-content-center">
+        <ul class="pagination text-center">
+          <li class="page-item">
+            <a (click)="onStepPage($event, -1)" class="page-link" href="#">«</a>
+          </li>
+          <li
+            *ngFor="let btn of paginator"
+            class="page-item"
+            [class.active]="btn.page === currentPage"
+          >
+            <a (click)="onPaginate($event, btn)" class="page-link" href="#"
+              >{{ btn.page }}
+            </a>
+          </li>
+          <li class="page-item">
+            <a (click)="onStepPage($event, +1)" class="page-link" href="#">»</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <th *ngFor="let col of tableColumns">{{ col.title }}</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th *ngFor="let col of tableColumns">{{ col.title }}</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr
+          *ngFor="
+            let superhero of list$
+              | async
+              | complexFilterPipe: filterKey:phrase
+              | slice: pageSliceStart:pageSliceEnd
+          "
+        >
+          <td>{{ superhero._id }}</td>
+          <td>{{ superhero.name }}</td>
+          <td>{{ superhero.slug }}</td>
+          <td>
+            <strong>Intelligence:</strong>
+            {{ superhero.powerstats.intelligence }}
+            <br />
+            <strong>Strength:</strong> {{ superhero.powerstats.intelligence }}
+            <br />
+            <strong>Speed:</strong> {{ superhero.powerstats.intelligence }}
+            <br />
+            <strong>Power:</strong> {{ superhero.powerstats.intelligence }}
+            <br />
+            <strong>Combat:</strong> {{ superhero.powerstats.intelligence }}
+          </td>
+          <td>
+            <strong>Gender:</strong> {{ superhero.appearance.gender }}
+            <br />
+            <strong>Race:</strong> {{ superhero.appearance.race }}
+            <br />
+            <strong>Height:</strong> {{ superhero.appearance.height }}
+            <br />
+            <strong>Weight:</strong> {{ superhero.appearance.weight }}
+            <br />
+            <strong>Eye color:</strong> {{ superhero.appearance.eyeColor }}
+            <br />
+            <strong>Hair color:</strong> {{ superhero.appearance.hairColor }}
+          </td>
+          <td>
+            <strong>Place of Birth:</strong>
+            {{ superhero.biography.placeOfBirth }}
+            <strong><br />First Apperance:</strong>
+            {{ superhero.biography.firstAppearance }}
+            <strong><br />Publisher:</strong>
+            {{ superhero.biography.publisher }}
+          </td>
+          <td>{{ superhero.work.occupation }}</td>
+          <td>{{ superhero.connections.relatives }}</td>
+          <td>{{ superhero.images.xs }}</td>
+          <td>
+            <div class="btn-group">
+              <button [routerLink]="[superhero._id]" class="btn btn-info">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button (click)="onDelete(superhero._id)" class="btn btn-danger">
+                <i class="fa fa-trash"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h2 class="h6 pl-4 py-4">
     *Powerstats: intelligence, strength, speed, durability, power, combat
   </h2>
 </div>
