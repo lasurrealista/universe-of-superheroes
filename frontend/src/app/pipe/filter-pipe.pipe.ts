@@ -5,33 +5,25 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipePipe implements PipeTransform {
 
-  transform(list: any[] | null, key: string,
-    phrase: string | number | boolean,
-    props?: { count: number }): any[] | null {
+  transform(
+    value: any[] | null,
+    key: string,
+    phrase: string | number | boolean): Array<any> | null {
 
-    if (!Array.isArray(list) || !phrase || !key) {
-      return list;
+    if (!Array.isArray(value) || !key || !phrase) {
+      return value;
     }
 
+    phrase = typeof phrase === 'number' ? phrase : ('' + phrase).toLowerCase();
 
-    const filtered = list.filter(item => {
-
+    return value.filter(item => {
       if (typeof item[key] === 'number' && typeof phrase === 'number') {
         return item[key] === phrase;
       }
 
-      phrase = ('' + phrase).toLocaleLowerCase();
+      return ('' + item[key]).toLowerCase().includes(phrase as string);
+    })
 
-      if (typeof item[key] === 'object') {
-        return Object.values(item[key]).join('').toLocaleLowerCase().includes(phrase);
-      } else {
-        return ('' + item[key]).toLocaleLowerCase().includes(phrase);
-      }
-    });
-
-    if (props?.count) {
-      props.count = filtered.length;
-    }
-    return filtered;
   }
+
 }
