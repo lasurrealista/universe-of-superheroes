@@ -1,8 +1,20 @@
 <div class="container-fluid p-4">
 
+  <div class="filter mb-4">
+      <select [(ngModel)]="filterKey" class="form-control select-css">
+        <option *ngFor="let col of tableColumns" [value]="col.key">{{ col.title }}</option>
+      </select>
+      <div class="col-12 mt-2">
+        <form class="form-inline my-2 my-lg-0 py-2 d-flex justify-content-center">
+          <input (keyup)="searchEvent($event)" class="search-input form-control mr-sm-2" type="text"
+            placeholder="Enter some text...">
+          <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
+        </form>
+  </div>
+
   <div class="row">
     <div class="col-12">
-      <nav class="d-flex justify-content-end">
+      <nav class="d-flex justify-content-center">
         <ul class="pagination">
           <li class="page-item">
             <a (click)="onStepPage($event, -1)" class="page-link" href="#"><</a></li>
@@ -31,7 +43,7 @@
         </tr>
       </tfoot>
       <tbody>
-        <tr *ngFor="let row of list$ | async | slice:pageSliceStart:pageSliceEnd">
+        <tr *ngFor="let row of list$ | async | filterPipe:filterKey:phrase | slice:pageSliceStart:pageSliceEnd">
           <td *ngFor="let col of tableColumns">
             {{ row[col.key] | xPipe: col.pipes:col.pipeArgs }}
             <!--<span *ngIf="!col.outputTransform && !col.htmlOutput">

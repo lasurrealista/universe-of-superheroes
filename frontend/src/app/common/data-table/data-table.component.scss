@@ -14,7 +14,7 @@ th {
 	background-color: $secondary-color;
 	border-radius: 40px;
 	box-shadow: 0 5px 25px 0 $card-background;
-  margin-bottom: 25px;
+  margin: 25px 0;
 	padding: 10px;
 
 	li {
@@ -49,5 +49,17 @@ th {
 		& a:last-child {
 				border-radius: 0 40px 40px 0;
     }
+    }
+}
+
+.btn-search {
+  background-color: $card-button;
+  border: none;
+  color: $white;
+  transition: all .2s ease-in-out;
+
+    &:hover {
+      color: $card-background;
+      transform: scale(1.1);
     }
 }

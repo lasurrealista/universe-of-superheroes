@@ -18,6 +18,8 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
 
   @Input() tableColumns: ITableColumn[] = [];
   @Input() list$: Observable<T[]> | null = null;
+  @Input() filterKey: string = '';
+  phrase: string = '';
 
   constructor(
     private config: ConfigService,
@@ -32,7 +34,7 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
     //this.baseService.delete(entity);
   }
 
-  entitiesNum: number = 500;
+  entitiesNum: number = 20;
   pageSize: number = 10;
   pageStart: number = 1;
   currentPage: number = 1;
@@ -64,5 +66,9 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
     event.preventDefault();
     this.currentPage += step;
     this.pageStart = (this.currentPage - 5) < 1 ? 1 : (this.currentPage - 5);
+  }
+
+  searchEvent(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
   }
 }
