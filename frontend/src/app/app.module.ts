@@ -25,6 +25,7 @@ import { MarvelCharacterEditorComponent } from './page/marvel-character-editor/m
 import { SuperheroesCardsComponent } from './page/superheroes-cards/superheroes-cards.component';
 import { FilterPipePipe } from './pipe/filter-pipe.pipe';
 import { ComplexFilterPipePipe } from './pipe/complex-filter-pipe.pipe';
+import { SorterPipePipe } from './pipe/sorter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ComplexFilterPipePipe } from './pipe/complex-filter-pipe.pipe';
     MarvelCharacterEditorComponent,
     SuperheroesCardsComponent,
     FilterPipePipe,
-    ComplexFilterPipePipe
+    ComplexFilterPipePipe,
+    SorterPipePipe
   ],
   imports: [
     BrowserModule,

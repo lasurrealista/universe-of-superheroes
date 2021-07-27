@@ -1,6 +1,6 @@
 <div class="container-fluid px-4">
 
-  <div class="filter pt-4">
+  <div class="filter inline pt-4">
     <select [(ngModel)]="filterKey" class="form-control select-css">
       <option *ngFor="let col of tableColumns" [value]="col.key">
         {{ col.title }}
@@ -58,7 +58,22 @@
     <table class="table table-striped table-dark">
       <thead>
         <tr>
-          <th *ngFor="let col of tableColumns">{{ col.title }}</th>
+          <th (click)="onColumnSelect(col.key)" *ngFor="let col of tableColumns">
+            <i *ngIf="columnKey === col.key && (col.key === '_id' || col.key === 'powerstats') && sortDir === 1"
+                        class="fa fa-sort-numeric-asc"></i>
+                      <i *ngIf="columnKey === col.key && (col.key === '_id' || col.key === 'powerstats') && sortDir === -1"
+                        class="fa fa-sort-numeric-desc"></i>
+                      <i *ngIf="columnKey === col.key && (col.key === 'name' || col.key === 'slug'
+                                      || col.key === 'appearance' || col.key === 'biography'
+                                      || col.key === 'work' || col.key === 'connections'
+                                      || col.key === 'images') && sortDir === 1"
+                        class="fa fa-sort-alpha-asc"></i>
+                      <i *ngIf="columnKey === col.key && (col.key === 'name' || col.key === 'slug'
+                      || col.key === 'appearance' || col.key === 'biography'
+                      || col.key === 'work' || col.key === 'connections'
+                      || col.key === 'images') && sortDir === -1"
+                        class="fa fa-sort-alpha-desc"></i>
+            {{ col.title }}</th>
         </tr>
       </thead>
       <tfoot>
@@ -68,13 +83,11 @@
       </tfoot>
       <tbody>
         <tr
-          *ngFor="
-            let superhero of list$
+          *ngFor="let superhero of list$
               | async
               | complexFilterPipe: filterKey:phrase
-              | slice: pageSliceStart:pageSliceEnd
-          "
-        >
+              | sorterPipe:columnKey:sortDir
+              | slice: pageSliceStart:pageSliceEnd">
           <td>{{ superhero._id }}</td>
           <td>{{ superhero.name }}</td>
           <td>{{ superhero.slug }}</td>

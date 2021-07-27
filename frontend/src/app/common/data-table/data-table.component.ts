@@ -71,4 +71,13 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
   searchEvent(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;
   }
+
+  columnKey : string = '';
+  sortDir : number = -1;
+
+  onColumnSelect(key : string): void {
+      this.columnKey = key;
+      this.sortDir = this.sortDir * (-1);
+  }
+
 }
