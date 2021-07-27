@@ -21,8 +21,9 @@ export class SuperheroesComponent implements OnInit {
 
     ngOnInit(): void {}
 
-    onDelete(_id : string): void {
-        this.superheroService.delete(_id);
+    onDelete(superhero: Superhero): void {
+        this.superheroService.delete(superhero).subscribe(
+          () => this.superheroService.getAll())
     }
 
     superheroesProperties : {

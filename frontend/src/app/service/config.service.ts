@@ -14,7 +14,7 @@ export interface ITableColumn {
 })
 export class ConfigService {
 
-  public readonly apiUrl: string = 'http://localhost:3000/';
+  public readonly apiUrl: string = 'http://localhost:3000';
 
   superheroColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
