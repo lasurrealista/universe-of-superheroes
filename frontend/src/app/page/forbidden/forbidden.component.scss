@@ -1,0 +1,104 @@
+@use '../../../assets/modules/colors.scss'as *;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
+
+body {
+  min-height: 100%;
+  background-color:$dark-grey;
+  font-family: "Roboto Condensed";
+  text-transform: uppercase;
+  overflow-x: hidden;
+}
+
+.police-tape {
+  background-color: $police-tape;
+  background: linear-gradient(180deg, lighten($police-tape, 20%) 0%, $police-tape 5%, $police-tape 90%, lighten($police-tape, 5%) 95%, darken($police-tape, 50%) 100%);
+  padding: 0.125em;
+  text-align: center;
+  white-space: nowrap;
+
+  &--1, &--2 {
+    position: absolute;
+    left: -0.00001%;
+    right: -0.00001%;
+  }
+
+  &--1 {
+    top: 25%;
+  }
+
+  &--2 {
+    top: 40%;
+  }
+}
+
+
+.ghost {
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+  height: 100vh;
+
+  &--columns {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 200px;
+    align-content: stretch;
+  }
+
+  &--column {
+    flex: 1 0 30%;
+    border-width: 0px;
+    border-style: solid;
+    border-color: $lighter-grey;
+    border-left-width: 10px;
+    background-color: darken($lighter-grey, 6%);
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        .code {
+          @for $j from 1 through 4 {
+            &:nth-child(#{$j}) {
+              // $rotation: (5 - random(10)) + deg;
+              // transform: translateY(0px) rotate($rotation);
+              $spacing: (random(9) / 2) + 1em;
+              margin-left: $spacing;
+            }
+          }
+        }
+      }
+    }
+}
+
+.ghost--main {
+  background-color: $dark-grey;
+  border-top: 15px solid lighten($lighter-grey, 4%);
+  flex: 1 0 100px;
+}
+
+.code {
+  display: block;
+  width: 100px;
+  background-color: $lighter-grey;
+  height: 1em;
+  margin: 1em;
+
+}
+
+.ghost--main .code {
+  height: 2em;
+  width: 200px;
+}
+
+.btn-primary {
+  background-color: $card-button;
+  border: none;
+  color: $white;
+  position: absolute;
+  top: 51%;
+  transition: all .2s ease-in-out;
+
+    &:hover {
+      color: $card-background;
+      transform: scale(1.1);
+    }
+}
+}

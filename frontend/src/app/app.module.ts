@@ -26,6 +26,7 @@ import { SuperheroesCardsComponent } from './page/superheroes-cards/superheroes-
 import { FilterPipePipe } from './pipe/filter-pipe.pipe';
 import { ComplexFilterPipePipe } from './pipe/complex-filter-pipe.pipe';
 import { SorterPipePipe } from './pipe/sorter-pipe.pipe';
+import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { SorterPipePipe } from './pipe/sorter-pipe.pipe';
     SuperheroesCardsComponent,
     FilterPipePipe,
     ComplexFilterPipePipe,
-    SorterPipePipe
+    SorterPipePipe,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,
