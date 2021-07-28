@@ -6,7 +6,7 @@ import { Powerstats } from "./powerstats";
 import { Work } from "./work";
 
 export class Superhero {
-    _id: string = '';
+    _id: number | string = 0;
     name: string = '';
     slug: string = '';
     powerstats: Powerstats = new Powerstats();
