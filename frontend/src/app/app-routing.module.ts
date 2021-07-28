@@ -16,6 +16,7 @@ import { MarvelEventEditorComponent } from './page/marvel-event-editor/marvel-ev
 import { MarvelStoryEditorComponent } from './page/marvel-story-editor/marvel-story-editor.component';
 import { SuperheroesCardsComponent } from './page/superheroes-cards/superheroes-cards.component';
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
+import { LoginComponent } from './page/login/login.component';
 
 const routes: Routes = [
   {
@@ -77,6 +78,10 @@ const routes: Routes = [
   {
     path: 'forbidden',
     component: ForbiddenComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   },
   {
     path: '**',
