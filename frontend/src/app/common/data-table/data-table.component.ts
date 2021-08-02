@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { BaseService } from 'src/app/service/base.service';
 import { ConfigService, ITableColumn } from 'src/app/service/config.service';
@@ -17,8 +17,10 @@ interface IPageBtn {
 export class DataTableComponent<T extends {[propname: string]: any}> implements OnInit {
 
   @Input() tableColumns: ITableColumn[] = [];
-  @Input() list$: Observable<T[]> | null = null;
+  @Input() list$: Observable<T[]> = of([]);
   @Input() filterKey: string = '';
+
+  entitiesNum: number = 0;
   phrase: string = '';
 
   constructor(
@@ -28,13 +30,15 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
   }
 
   ngOnInit(): void {
+    this.list$.subscribe(
+      list => this.entitiesNum = list.length
+    );
   }
 
   onDelete(entity: T): void {
     //this.baseService.delete(entity);
   }
 
-  entitiesNum: number = 20;
   pageSize: number = 10;
   pageStart: number = 1;
   currentPage: number = 1;

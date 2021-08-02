@@ -4,6 +4,7 @@ import {Superhero} from 'src/app/model/superhero';
 import {SuperheroService} from 'src/app/service/superhero.service';
 import {ITableColumn, ConfigService} from 'src/app/service/config.service';
 import {tap} from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface IPageBtn {
     page: number;
@@ -17,13 +18,17 @@ export class SuperheroesComponent implements OnInit {
     tableColumns : ITableColumn[] = this.config.superheroColumns;
     list$ : Observable < Superhero[] > = this.superheroService.getAll().pipe(tap(superheroes => this.superheroesProperties.count = superheroes.length));
 
-    constructor(private config : ConfigService, private superheroService : SuperheroService,) {}
+    constructor(
+      private config : ConfigService,
+      private superheroService : SuperheroService,
+    ) { }
 
     ngOnInit(): void {}
 
     onDelete(superhero: Superhero): void {
         this.superheroService.delete(superhero).subscribe(
-          () => this.superheroService.getAll())
+          () => this.list$ = this.superheroService.getAll()
+        )
     }
 
     superheroesProperties : {
