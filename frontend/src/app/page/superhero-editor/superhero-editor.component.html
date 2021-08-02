@@ -1,1 +1,99 @@
-<p>superhero-editor works!</p>
+<div class="jumbotron-holder p-5">
+  <div class="text-center px-5">
+    <div class="d-flex justify-content-center">
+      <div class="row">
+        <div *ngIf="superhero$ | async as superhero" class="col-8 offset-2">
+          <div class="offset-4 m-5">
+            <h1 class="h2 text-center">Superhero details</h1>
+          </div>
+
+          <form
+            #superheroForm="ngForm"
+            (ngSubmit)="onUpdate(superheroForm, superhero)"
+          >
+            <div class="form-group">
+              <label for="id">#</label>
+              <input
+                [(ngModel)]="superhero._id"
+                class="form-control"
+                name="id"
+                type="text"
+                readonly
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                [(ngModel)]="superhero.name"
+                class="form-control"
+                name="name"
+                type="text"
+                pattern="^[A-Z][ A-Za-z0-9_@./#&+-]{0,24}"
+                required
+              />
+              <div
+                [hidden]="superheroForm.controls.name?.valid"
+                class="error-message"
+              >
+                The name of the superhero must be between 1 and 25 characters
+                and must begin with a capital letter.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="slug">Slug</label>
+              <input
+                [(ngModel)]="superhero.slug"
+                class="form-control"
+                name="slug"
+                type="text"
+                pattern="^[ A-Za-z0-9_@./#&+-]{1,25}"
+                required
+              />
+              <div
+                [hidden]="superheroForm.controls.slug?.valid"
+                class="error-message"
+              >
+                The slug of the superhero must be between 1 and 25 characters.
+              </div>
+            </div>
+
+            <pre class="text-right mt-3">
+          <small>* required </small>
+        </pre>
+
+            <div class="btn-group d-flex justify-content-center pb-5">
+              <button
+                [routerLink]="['/superheroes/']"
+                type="reset"
+                class="btn btn-secondary cancelBtn ml-5"
+              >
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+              </button>
+              <button
+                [disabled]="superheroForm.invalid || updating"
+                class="btn btn-success mr-5"
+                type="submit"
+              >
+                <i *ngIf="!updating" class="fa fa-save"></i>
+                <i *ngIf="updating" class="fa fa-refresh"></i>
+              </button>
+              <!--
+              <button
+                (click)="showHtmlToasterUpdate()"
+                [disabled]="superheroForm.invalid || updating"
+                class="btn btn-success mr-5"
+                type="submit"
+              >
+                <i *ngIf="!updating" class="fa fa-save"></i>
+                <i *ngIf="updating" class="fa fa-refresh"></i>
+              </button>
+            -->
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
