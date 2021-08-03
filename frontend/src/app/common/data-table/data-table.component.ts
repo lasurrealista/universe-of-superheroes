@@ -1,7 +1,6 @@
+import { EventEmitter, Output } from '@angular/core';
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs/operators';
-import { BaseService } from 'src/app/service/base.service';
 import { ConfigService, ITableColumn } from 'src/app/service/config.service';
 
 interface IPageBtn {
@@ -20,12 +19,15 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
   @Input() list$: Observable<T[]> = of([]);
   @Input() filterKey: string = '';
 
+  @Output() selectOne: EventEmitter<T> = new EventEmitter<T>();
+  @Output() deleteOne: EventEmitter<T> = new EventEmitter<T>();
+
   entitiesNum: number = 0;
   phrase: string = '';
 
   constructor(
     private config: ConfigService,
-  ) {
+    ) {
 
   }
 
@@ -35,8 +37,12 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
     );
   }
 
+  onSelect(entity: T): void {
+    this.selectOne.emit(entity);
+  }
+
   onDelete(entity: T): void {
-    //this.baseService.delete(entity);
+    this.deleteOne.emit(entity);
   }
 
   pageSize: number = 10;

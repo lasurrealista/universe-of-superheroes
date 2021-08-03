@@ -59,7 +59,7 @@
           </td>
           <td>
             <div class="btn-group">
-              <button [routerLink]="[row._id]" class="btn btn-info">
+              <button (click)="onSelect(row)" class="btn btn-info">
                 <i class="fa fa-pencil"></i>
               </button>
               <button (click)="onDelete(row)"

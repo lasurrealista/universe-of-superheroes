@@ -1,6 +1,10 @@
 <div class="container-fluid px-4">
   <h1 class="text-center h2 pt-4">Marvel Stories</h1>
-  <app-data-table [tableColumns]="tableColumns" [list$]="list$">
+  <app-data-table
+  [tableColumns]="tableColumns"
+  [list$]="list$"
+  (selectOne)="onSelectOne($event)"
+  (deleteOne)="onDeleteOne($event)">
   </app-data-table>
 </div>
 <app-footer

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { MarvelComic } from 'src/app/model/marvel-comic';
 import { ConfigService, ITableColumn } from 'src/app/service/config.service';
@@ -21,9 +22,19 @@ export class MarvelComicsComponent implements OnInit {
   constructor(
     private config: ConfigService,
     private marvelComicService: MarvelComicService,
+    private router: Router,
     ) { }
 
   ngOnInit(): void {
   }
 
+  onSelectOne(marvelComic: MarvelComic): void {
+    this.router.navigate(['/', 'marvel-universe', 'marvel-comics', marvelComic._id])
+  }
+
+  onDeleteOne(marvelComic: MarvelComic): void {
+    this.marvelComicService.delete(marvelComic).subscribe(
+      () => this.list$ = this.marvelComicService.getAll()
+      )
+  }
 }
