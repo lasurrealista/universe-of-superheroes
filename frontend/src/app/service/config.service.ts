@@ -109,6 +109,15 @@ export class ConfigService {
     {key: "title", title: "Description"},
   ];
 
+  userColumns: ITableColumn[] = [
+    {key: "_id", title: "#"},
+    {key: "first_name", title: "First Name"},
+    {key: "last_name", title: "Last Name"},
+    {key: "email", title: "Email"},
+    {key: "password", title: "Password"},
+    {key: "role", title: "Role"},
+  ];
+
   constructor() { }
 
   // row.customer.name => (row, 'customer.name')

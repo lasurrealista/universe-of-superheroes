@@ -29,6 +29,8 @@ import { SorterPipePipe } from './pipe/sorter-pipe.pipe';
 import { ForbiddenComponent } from './page/forbidden/forbidden.component';
 import { LoginComponent } from './page/login/login.component';
 import { FilterByNamePipe } from './pipe/filter-by-name.pipe';
+import { UserComponent } from './page/user/user.component';
+import { UserEditorComponent } from './page/user-editor/user-editor.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,9 @@ import { FilterByNamePipe } from './pipe/filter-by-name.pipe';
     SorterPipePipe,
     ForbiddenComponent,
     LoginComponent,
-    FilterByNamePipe
+    FilterByNamePipe,
+    UserComponent,
+    UserEditorComponent
   ],
   imports: [
     BrowserModule,
