@@ -4,8 +4,8 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+  <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" routerLink="/">Home<span class="sr-only">(current)</span></a>
       </li>
@@ -27,25 +27,20 @@
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a class="nav-link" routerLink="/users" href="#">Users</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item mr-2">
         <a class="nav-link login" [routerLink]="['/login']">Login</a>
       </li>
-    </ul>
-    <!--<ul class="my-2 my-lg-0 right-buttons">
-      <li *ngIf="user" class="mr-1">
-        <span>Hi {{ user?.first_name }}!</span>
-      </li>
-      <li *ngIf="!user">
+      <li class="nav-item" *ngIf="!(user$ | async)">
         <a routerLink="/login" class="btn btn-success">
           <i class="fa fa-sign-in"></i>
         </a>
       </li>
-      <li *ngIf="user">
+      <li *ngIf="user$ | async">
         <button (click)="onLogout()" class="btn btn-secondary">
           <i class="fa fa-sign-out"></i>
         </button>
       </li>
-    </ul>-->
+    </ul>
   </div>
 </nav>
 
