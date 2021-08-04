@@ -27837,7 +27837,7 @@
             "profile": "http://marvel.com/universe/Aegis_%28Trey_Rollins%29?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc",
             "url": "https://www.marvel.com/comics?&options%5Boffset%5D=0&totalcount=12",
             "stories": 0
-        }, [{
+        }, {
             "_id": 1011297,
             "name": "Agent Brand",
             "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/4/60/52695285d6e7e.jpg",
@@ -27966,7 +27966,7 @@
         "pageCount": 0,
         "url": "http://marvel.com/comics/issue/376/ant-man_2003_3?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       },
-      [{
+      {
         "_id": 1994,
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/f/20/4bc63a47b8dcb.jpg",
         "title":"Official Handbook of the Marvel Universe (2004) #13 (TEAMS)",
@@ -28220,7 +28220,7 @@
         "modified": "2013-10-18T16:38:16-0400",
         "url": "http://marvel.com/comics/events/234/avengers_disassembled?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       },
-      [{
+      {
         "_id": 322,
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/5/c0/53fe0732c1f02.jpg",
         "title": "Avengers NOW!",
@@ -28363,7 +28363,7 @@
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
         "comics - available": 0,
         "url": "http://marvel.com/comics/creators/3188/balcells?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
-      }, [{
+      }, {
         "_id": 12660,
         "fullName": "Batt",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
