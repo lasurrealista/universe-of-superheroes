@@ -157,7 +157,9 @@ Mindkét szcenárió megvalósítása esetén a kártyás nézetben a List gombr
 ## _**3. A Marvel Universe aloldalai**_
 ---
 
-_Megjegyzés:_ Az elérési útvonalban az aloldalak elnevezése előtt szerepel a `marvel/` kifejezés.
+_Megjegyzés:_ 
+- Az elérési útvonalban az aloldalak elnevezése előtt szerepel a `marvel-universe/` kifejezés.
+- Minden aloldalon működik a szűrés, a sorba rendezés, a keresés és a lapozó.
 
 ---
 **_Marvel Characters - Készítői oldal_**

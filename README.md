@@ -36,7 +36,7 @@ Ezek az adatok az azonosító, a név, a szuperképességek statisztikai adatai 
 ------------ | -------------
 A Szuperhősök gombra való kattintással megjelenik az összes szuperhős adata lista formátumban egy helyen. | A Szuperhősök gombra való kattintással megjelenik az összes szuperhős adata kártyás formátumban egy helyen. 
 
-Mindkét szcenárió megvalósítása esetén a kártyás nézetben a List gombra való kattintással a lista nézetre lehet navigálni.
+A kártyás nézetben a List gombra való kattintással a lista nézetre lehet navigálni.
 
 ---
 
@@ -97,8 +97,59 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 - A szöveges adatok alapján abc-szerinti és fordított sorrendben lehet rendezni a szuperhősöket.
 
 ---
+
+**8. agilis felhasználói történet:**
+
+> _A szuperhősöket felsoroló több oldal lapozható._
+
+**Elfogadási kritérium:**  
+- A lapozó egyes oldalainak kiválasztásával az ott felsorolt szuperhősök láthatóak.
+- A szuperhősöket felsoroló előző és következő oldalakra is lehet navigálni.
+
+---
 ---
 ## _**3. A Marvel Universe aloldalai**_
+---
+
+Minden egyes aloldalra jellemző:
+
+**1. agilis felhasználói történet:**
+
+> _Az entitások kategóriák szerint listázhatók._
+
+**Elfogadási kritérium:**  
+A kategória kiválasztásával frissül a listaoldal, ahol csak a szűrt adatok láthatók.
+
+---
+
+**2. agilis felhasználói történet:**
+
+> _Bármilyen kulcsszóra lehet keresni egy választott kategórián belül._
+
+**Elfogadási kritérium:**  
+A kategória kiválasztásával és a kulcsszónak megfelelően frissül a listaoldal, ahol csak a szűrt adatok láthatók.
+
+---
+
+**3. agilis felhasználói történet:**
+
+> _Különbözőképpen sorrendbe rendezhetőek az entitások egyes kategóriái._
+
+**Elfogadási kritérium:**  
+- A szám típusú adatok alapján növekvő és csökkenő sorrendben lehet rendezni az entitásokat.
+- A szöveges adatok alapján abc-szerinti és fordított sorrendben lehet rendezni az entitásokat.
+
+---
+
+**4. agilis felhasználói történet:**
+
+> _Az entitásokat felsoroló több oldal lapozható._
+
+**Elfogadási kritérium:**  
+- A lapozó egyes oldalainak kiválasztásával az ott felsorolt entitások láthatóak.
+- Az entitásokat felsoroló előző és következő oldalakra is lehet navigálni.
+
+---
 ---
 
 **_Marvel Characters - Készítői oldal_**
@@ -337,7 +388,6 @@ magas
 - A főoldalon statisztikák elhelyezése.
 - Az egyes aloldalakon statisztikák, kimutatások készítése a legfontosabb adatokból.
 - Az aloldalak lista nézete mellett kártya nézet kialakítása.
-- A szuperhősöket listázó aloldalon lapozó készítése.
 - A szuperhősöket listázó aloldalon az alábbi adatok megadása:
 
 Kiegészítések helye | Tartalma
