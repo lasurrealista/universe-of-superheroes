@@ -1,10 +1,9 @@
 <div class="jumbotron-holder p-5">
   <div class="text-center px-5">
-    <div class="d-flex justify-content-center">
       <div class="row">
-        <div *ngIf="superhero$ | async as superhero" class="col-8 offset-2">
+        <div *ngIf="superhero$ | async as superhero" class="col-6 offset-3">
           <div class="offset-4 m-5">
-            <h1 class="h2 text-center">Superhero details</h1>
+            <h1 class="h2 text-center">Superhero Details</h1>
           </div>
 
           <form
@@ -23,7 +22,7 @@
             </div>
 
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name">Name*</label>
               <input
                 [(ngModel)]="superhero.name"
                 class="form-control"
@@ -42,7 +41,7 @@
             </div>
 
             <div class="form-group">
-              <label for="slug">Slug</label>
+              <label for="slug">Slug*</label>
               <input
                 [(ngModel)]="superhero.slug"
                 class="form-control"
@@ -60,7 +59,7 @@
             </div>
 
             <div class="form-group">
-              <label for="intelligence">Intelligence</label>
+              <label for="intelligence">Intelligence*</label>
               <input
                 [(ngModel)]="superhero.powerstats.intelligence"
                 class="form-control"
@@ -78,7 +77,7 @@
             </div>
 
             <div class="form-group">
-              <label for="strength">Strength</label>
+              <label for="strength">Strength*</label>
               <input
                 [(ngModel)]="superhero.powerstats.strength"
                 class="form-control"
@@ -96,7 +95,7 @@
             </div>
 
             <div class="form-group">
-              <label for="speed">Speed</label>
+              <label for="speed">Speed*</label>
               <input
                 [(ngModel)]="superhero.powerstats.speed"
                 class="form-control"
@@ -114,7 +113,7 @@
             </div>
 
             <div class="form-group">
-              <label for="power">Power</label>
+              <label for="power">Power*</label>
               <input
                 [(ngModel)]="superhero.powerstats.power"
                 class="form-control"
@@ -132,7 +131,7 @@
             </div>
 
             <div class="form-group">
-              <label for="combat">Combat</label>
+              <label for="combat">Combat*</label>
               <input
                 [(ngModel)]="superhero.powerstats.combat"
                 class="form-control"
@@ -150,7 +149,7 @@
             </div>
 
             <div class="form-group">
-              <label for="gender">Gender</label>
+              <label for="gender">Gender*</label>
               <input
                 [(ngModel)]="superhero.appearance.gender"
                 class="form-control"
@@ -168,7 +167,7 @@
             </div>
 
             <div class="form-group">
-              <label for="race">Race</label>
+              <label for="race">Race*</label>
               <input
                 [(ngModel)]="superhero.appearance.race"
                 class="form-control"
@@ -186,7 +185,7 @@
             </div>
 
             <div class="form-group">
-              <label for="height">Height</label>
+              <label for="height">Height*</label>
               <input
                 [(ngModel)]="superhero.appearance.height[1]"
                 class="form-control"
@@ -205,7 +204,7 @@
             </div>
 
             <div class="form-group">
-              <label for="weight">Weight</label>
+              <label for="weight">Weight*</label>
               <input
                 [(ngModel)]="superhero.appearance.weight[1]"
                 class="form-control"
@@ -224,7 +223,7 @@
             </div>
 
             <div class="form-group">
-              <label for="eyeColor">Eye color</label>
+              <label for="eyeColor">Eye color*</label>
               <input
                 [(ngModel)]="superhero.appearance.eyeColor"
                 class="form-control"
@@ -242,7 +241,7 @@
             </div>
 
             <div class="form-group">
-              <label for="hairColor">Hair color</label>
+              <label for="hairColor">Hair color*</label>
               <input
                 [(ngModel)]="superhero.appearance.hairColor"
                 class="form-control"
@@ -260,7 +259,7 @@
             </div>
 
             <div class="form-group">
-              <label for="placeOfBirth">Place of Birth</label>
+              <label for="placeOfBirth">Place of Birth*</label>
               <input
                 [(ngModel)]="superhero.biography.placeOfBirth"
                 class="form-control"
@@ -278,7 +277,7 @@
             </div>
 
             <div class="form-group">
-              <label for="firstAppearance">First Appearance</label>
+              <label for="firstAppearance">First Appearance*</label>
               <input
                 [(ngModel)]="superhero.biography.firstAppearance"
                 class="form-control"
@@ -296,7 +295,7 @@
             </div>
 
             <div class="form-group">
-              <label for="publisher ">Publisher</label>
+              <label for="publisher ">Publisher*</label>
               <input
                 [(ngModel)]="superhero.biography.publisher"
                 class="form-control"
@@ -314,7 +313,7 @@
             </div>
 
             <div class="form-group">
-              <label for="occupation">Occupation</label>
+              <label for="occupation">Occupation*</label>
               <input
                 [(ngModel)]="superhero.work.occupation"
                 class="form-control"
@@ -332,7 +331,7 @@
             </div>
 
             <div class="form-group">
-              <label for="relatives">Relatives</label>
+              <label for="relatives">Relatives*</label>
               <input
                 [(ngModel)]="superhero.connections.relatives"
                 class="form-control"
@@ -350,7 +349,7 @@
             </div>
 
             <div class="form-group">
-              <label for="image">Image</label>
+              <label for="image">Image*</label>
               <input
                 [(ngModel)]="superhero.images.xs"
                 class="form-control"
@@ -404,4 +403,3 @@
       </div>
     </div>
   </div>
-</div>
