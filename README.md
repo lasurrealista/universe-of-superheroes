@@ -107,6 +107,16 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 - A szuperhősöket felsoroló előző és következő oldalakra is lehet navigálni.
 
 ---
+
+**9. agilis felhasználói történet:**
+
+> _A felvett adatok helyességének ellenőrzése automatikusan megtörténik._
+
+**Elfogadási kritérium:**  
+- Hibaüzenet jelzi, amennyiben nem megfelelő a formátum.
+- A hibaüzenet tartalmazza azt, hogy mi a megfelelő formátum.
+
+---
 ---
 ## _**3. A Marvel Universe aloldalai**_
 ---
@@ -148,6 +158,16 @@ A kategória kiválasztásával és a kulcsszónak megfelelően frissül a lista
 **Elfogadási kritérium:**  
 - A lapozó egyes oldalainak kiválasztásával az ott felsorolt entitások láthatóak.
 - Az entitásokat felsoroló előző és következő oldalakra is lehet navigálni.
+
+---
+
+**5. agilis felhasználói történet:**
+
+> _A felvett adatok helyességének ellenőrzése automatikusan megtörténik._
+
+**Elfogadási kritérium:**  
+- Hibaüzenet jelzi, amennyiben nem megfelelő a formátum.
+- A hibaüzenet tartalmazza azt, hogy mi a megfelelő formátum.
 
 ---
 ---
