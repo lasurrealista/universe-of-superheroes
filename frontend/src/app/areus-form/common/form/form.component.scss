@@ -1,0 +1,12 @@
+@use '../../../../assets/modules/colors' as *;
+
+.btn-primary {
+  background-color: $card-button;
+  border: none;
+  transition: all .2s ease-in-out;
+
+    &:hover {
+      color: $card-background;
+      transform: scale(1.1);
+    }
+}

@@ -1,7 +1,7 @@
 import { ValidatorFn } from "@angular/forms";
 
 export class FieldBase<T> {
-  value: T;
+  value: T | number | string;
   key: string;
   label: string;
   type?: string;
