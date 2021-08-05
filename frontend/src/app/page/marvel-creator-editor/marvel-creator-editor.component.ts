@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { MarvelCreator } from 'src/app/model/marvel-creator';
+import { MarvelCreatorService } from 'src/app/service/marvel-creator.service';
 
 @Component({
   selector: 'app-marvel-creator-editor',
@@ -7,9 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarvelCreatorEditorComponent implements OnInit {
 
-  constructor() { }
+  marvelCreator$: Observable<MarvelCreator> = this.ar.params.pipe(
+    switchMap(params => this.marvelCreatorService.get(params.id))
+  );
+  marvelCreator: MarvelCreator = new MarvelCreator();
+
+  constructor(
+    private marvelCreatorService: MarvelCreatorService,
+    private ar: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
-
 }
