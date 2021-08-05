@@ -26,4 +26,10 @@ export class MarvelCharacterEditorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSave(marvelCharacter: MarvelCharacter): void {
+    this.marvelCharacterService.update(marvelCharacter).subscribe(
+      entity => this.router.navigate(['marvel-universe/marvel-characters'])
+    );
+  }
+
 }

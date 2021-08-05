@@ -25,4 +25,10 @@ export class MarvelComicEditorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onSave(marvelComic: MarvelComic): void {
+    this.marvelComicService.update(marvelComic).subscribe(
+      entity => this.router.navigate(['marvel-universe/marvel-comics'])
+    );
+  }
 }

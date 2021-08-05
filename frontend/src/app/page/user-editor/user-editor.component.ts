@@ -25,4 +25,10 @@ export class UserEditorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onSave(user: User): void {
+    this.userService.update(user).subscribe(
+      entity => this.router.navigate(['users'])
+    );
+  }
 }

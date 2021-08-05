@@ -25,4 +25,10 @@ export class MarvelEventEditorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onSave(marvelEvent: MarvelEvent): void {
+    this.marvelEventService.update(marvelEvent).subscribe(
+      entity => this.router.navigate(['marvel-universe/marvel-events'])
+    );
+  }
 }

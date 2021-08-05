@@ -25,4 +25,10 @@ export class MarvelCreatorEditorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onSave(marvelCreator: MarvelCreator): void {
+    this.marvelCreatorService.update(marvelCreator).subscribe(
+      entity => this.router.navigate(['marvel-universe/marvel-creators'])
+    );
+  }
 }

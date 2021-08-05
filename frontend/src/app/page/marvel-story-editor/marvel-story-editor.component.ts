@@ -25,4 +25,10 @@ export class MarvelStoryEditorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onSave(marvelStory: MarvelStory): void {
+    this.marvelStoryService.update(marvelStory).subscribe(
+      entity => this.router.navigate(['marvel-universe/marvel-stories'])
+    );
+  }
 }
