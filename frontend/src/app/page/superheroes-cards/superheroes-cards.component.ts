@@ -40,7 +40,7 @@ list$: Observable<Superhero[]> = this.superheroService.getAll()
     count: 0
   };
 
-pageSize : number = 10;
+pageSize : number = 12;
 pageStart : number = 1;
 currentPage : number = 1;
 
