@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { FieldBase } from 'src/app/areus-form/model/field-base';
 import { InputField } from 'src/app/areus-form/model/input-field';
@@ -16,7 +16,12 @@ import { MarvelCreatorService } from 'src/app/service/marvel-creator.service';
 export class MarvelCreatorEditorComponent implements OnInit {
 
   marvelCreator$: Observable<MarvelCreator> = this.ar.params.pipe(
-    switchMap(params => this.marvelCreatorService.get(params.id))
+    switchMap(params => {
+      if (Number(params.id) === 0) {
+        return of(new MarvelCreator());
+      }
+      return this.marvelCreatorService.get(Number(params.id));
+    })
   );
   marvelCreator: MarvelCreator = new MarvelCreator();
 
@@ -65,8 +70,15 @@ export class MarvelCreatorEditorComponent implements OnInit {
   }
 
   onSave(marvelCreator: MarvelCreator): void {
-    this.marvelCreatorService.update(marvelCreator).subscribe(
-      entity => this.router.navigate(['marvel-universe/marvel-creators'])
-    );
+    if (marvelCreator._id == 0) {
+      this.marvelCreatorService.create(marvelCreator).subscribe(
+        () => this.router.navigate(['marvel-universe/marvel-creators'])
+      );
+    } else {
+      //this.updating = true;
+      this.marvelCreatorService.update(marvelCreator).subscribe(
+        () => this.router.navigate(['marvel-universe/marvel-creators'])
+      );
+      }
   }
 }

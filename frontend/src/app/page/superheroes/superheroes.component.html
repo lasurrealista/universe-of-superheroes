@@ -1,6 +1,19 @@
 <div class="container-fluid px-4">
 
-  <div class="filter inline pt-4">
+  <div class="text-center pt-4">
+    <button class="btn btn-primary btn-lg" routerLink="/superheroes-cards">
+      Let's see them
+    </button>
+  </div>
+
+  <h1 class="text-center h2 pt-4">Superheroes</h1>
+
+  <div class="form-group d-flex justify-content-center mt-4">
+    <button [routerLink]="'0'" class="btn btn-success">Add New
+      Superhero</button>
+  </div>
+
+  <div class="filter inline pt-3">
     <select [(ngModel)]="filterKey" class="form-control select-css">
       <option *ngFor="let col of tableColumns" [value]="col.key">
         {{ col.title }}
@@ -20,15 +33,6 @@
         </button>
       </form>
     </div>
-
-  <div class="text-center pt-4">
-    <button class="btn btn-primary btn-lg" routerLink="/superheroes-cards">
-      Let's see them
-    </button>
-  </div>
-  <h1 class="text-center h2 pt-4">Superheroes</h1>
-  <!--<app-data-table [tableColumns]="tableColumns" [list$]="list$">
-  </app-data-table>-->
 
   <div class="row mt-2">
     <div class="col-12">

@@ -31,11 +31,10 @@ export class SuperheroEditorComponent implements OnInit {
     this.superheroService.getAll();
     this.activatedRoute.params.subscribe(
       params => {
-        console.log(params.id);
-        if (params.id == 0) {
+        if (Number(params.id == 0)) {
           this.superhero$ = of( new Superhero() );
         } else {
-          this.superhero$ = this.superheroService.get(params.id);
+          this.superhero$ = this.superheroService.get(Number(params.id));
         }
       })
   }
@@ -50,8 +49,14 @@ export class SuperheroEditorComponent implements OnInit {
 
     this.updating = true;
 
-    this.superheroService.update(superhero).subscribe(
-      () => this.router.navigate(['superheroes'])
-    )
+    if (superhero._id == 0) {
+      this.superheroService.create(superhero).subscribe(
+        () => this.router.navigate(['superheroes'])
+      );
+    } else {
+      this.superheroService.update(superhero).subscribe(
+        () => this.router.navigate(['superheroes'])
+      );
+    }
 }
 }

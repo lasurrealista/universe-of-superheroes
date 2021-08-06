@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { FieldBase } from 'src/app/areus-form/model/field-base';
 import { InputField } from 'src/app/areus-form/model/input-field';
@@ -17,7 +17,12 @@ import { MarvelEventService } from 'src/app/service/marvel-event.service';
 export class MarvelEventEditorComponent implements OnInit {
 
   marvelEvent$: Observable<MarvelEvent> = this.ar.params.pipe(
-    switchMap(params => this.marvelEventService.get(params.id))
+    switchMap(params => {
+      if (Number(params.id) === 0) {
+        return of(new MarvelEvent());
+      }
+      return this.marvelEventService.get(Number(params.id));
+    })
   );
   marvelEvent: MarvelEvent = new MarvelEvent();
 
@@ -66,8 +71,15 @@ export class MarvelEventEditorComponent implements OnInit {
   }
 
   onSave(marvelEvent: MarvelEvent): void {
-    this.marvelEventService.update(marvelEvent).subscribe(
-      entity => this.router.navigate(['marvel-universe/marvel-events'])
-    );
+    if (marvelEvent._id == 0) {
+      this.marvelEventService.create(marvelEvent).subscribe(
+        () => this.router.navigate(['marvel-universe/marvel-events'])
+      );
+    } else {
+      //this.updating = true;
+      this.marvelEventService.update(marvelEvent).subscribe(
+        () => this.router.navigate(['marvel-universe/marvel-events'])
+      );
+      }
   }
 }

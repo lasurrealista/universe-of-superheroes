@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { FieldBase } from 'src/app/areus-form/model/field-base';
 import { InputField } from 'src/app/areus-form/model/input-field';
@@ -16,7 +16,12 @@ import { UserService } from 'src/app/service/user.service';
 export class UserEditorComponent implements OnInit {
 
   user$: Observable<User> = this.ar.params.pipe(
-    switchMap(params => this.userService.get(params.id))
+    switchMap(params => {
+      if (Number(params.id) === 0) {
+        return of(new User());
+      }
+      return this.userService.get(Number(params.id));
+    })
   );
   user: User = new User();
 
@@ -72,8 +77,16 @@ export class UserEditorComponent implements OnInit {
     ];
   }
   onSave(user: User): void {
-    this.userService.update(user).subscribe(
-      entity => this.router.navigate(['users'])
-    );
+
+    if (user._id == 0) {
+      this.userService.create(user).subscribe(
+        () => this.router.navigate(['users'])
+      );
+    } else {
+      //this.updating = true;
+      this.userService.update(user).subscribe(
+        () => this.router.navigate(['users'])
+      );
+    }
   }
 }

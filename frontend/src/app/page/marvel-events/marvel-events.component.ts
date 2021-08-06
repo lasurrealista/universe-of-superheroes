@@ -16,6 +16,8 @@ export class MarvelEventsComponent implements OnInit {
   url: string = 'https://www.marvel.com/comics/events_crossovers';
   linkText: string = 'Marvel Events';
 
+  entity: string = 'Marvel Event';
+
   tableColumns: ITableColumn[] = this.config.marvelEventColumns;
   list$: Observable<MarvelEvent[]> = this.marvelEventService.getAll();
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { FieldBase } from 'src/app/areus-form/model/field-base';
 import { InputField } from 'src/app/areus-form/model/input-field';
@@ -16,7 +16,12 @@ import { MarvelComicService } from 'src/app/service/marvel-comic.service';
 export class MarvelComicEditorComponent implements OnInit {
 
   marvelComic$: Observable<MarvelComic> = this.ar.params.pipe(
-    switchMap(params => this.marvelComicService.get(params.id))
+    switchMap(params => {
+      if (Number(params.id) === 0) {
+        return of(new MarvelComic());
+      }
+      return this.marvelComicService.get(Number(params.id));
+    })
   );
   marvelComic: MarvelComic = new MarvelComic();
 
@@ -65,8 +70,15 @@ export class MarvelComicEditorComponent implements OnInit {
   }
 
   onSave(marvelComic: MarvelComic): void {
-    this.marvelComicService.update(marvelComic).subscribe(
-      entity => this.router.navigate(['marvel-universe/marvel-comics'])
-    );
+    if (marvelComic._id == 0) {
+      this.marvelComicService.create(marvelComic).subscribe(
+        () => this.router.navigate(['marvel-universe/marvel-comics'])
+      );
+    } else {
+      //this.updating = true;
+      this.marvelComicService.update(marvelComic).subscribe(
+        () => this.router.navigate(['marvel-universe/marvel-comics'])
+      );
+      }
   }
 }

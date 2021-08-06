@@ -16,6 +16,8 @@ export class MarvelComicsComponent implements OnInit {
   url: string = 'https://www.marvel.com/comics';
   linkText: string = 'Marvel Comics';
 
+  entity: string = 'Marvel Comic';
+
   tableColumns: ITableColumn[] = this.config.marvelComicColumns;
   list$: Observable<MarvelComic[]> = this.marvelComicService.getAll();
 

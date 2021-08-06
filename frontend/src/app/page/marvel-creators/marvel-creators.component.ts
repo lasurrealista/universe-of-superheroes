@@ -16,6 +16,8 @@ export class MarvelCreatorsComponent implements OnInit {
   url: string = 'https://www.marvel.com/comics/creators';
   linkText: string = 'Marvel Creators';
 
+  entity: string = 'Marvel Creator';
+
   tableColumns: ITableColumn[] = this.config.marvelCreatorColumns;
   list$: Observable<MarvelCreator[]> = this.marvelCreatorService.getAll();
 
