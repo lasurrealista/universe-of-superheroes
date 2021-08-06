@@ -18,6 +18,7 @@ export class DataTableComponent<T extends {[propname: string]: any}> implements 
   @Input() tableColumns: ITableColumn[] = [];
   @Input() list$: Observable<T[]> = of([]);
   @Input() filterKey: string = '';
+  @Input() entity: string = '';
 
   @Output() selectOne: EventEmitter<T> = new EventEmitter<T>();
   @Output() deleteOne: EventEmitter<T> = new EventEmitter<T>();

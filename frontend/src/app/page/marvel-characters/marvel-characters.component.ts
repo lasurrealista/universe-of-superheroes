@@ -16,6 +16,8 @@ export class MarvelCharactersComponent implements OnInit {
   url: string = 'https://www.marvel.com/characters';
   linkText: string = 'Marvel Characters';
 
+  entity: string = 'Marvel Character';
+
   tableColumns: ITableColumn[] = this.config.marvelCharacterColumns;
   list$: Observable<MarvelCharacter[]> = this.marvelCharacterService.getAll();
 
@@ -37,4 +39,5 @@ export class MarvelCharactersComponent implements OnInit {
       () => this.list$ = this.marvelCharacterService.getAll()
       )
   }
+
 }

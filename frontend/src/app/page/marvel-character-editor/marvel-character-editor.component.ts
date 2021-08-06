@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { FieldBase } from 'src/app/areus-form/model/field-base';
 import { InputField } from 'src/app/areus-form/model/input-field';
@@ -17,7 +17,12 @@ import { MarvelCharacterService } from 'src/app/service/marvel-character.service
 export class MarvelCharacterEditorComponent implements OnInit {
 
   marvelCharacter$: Observable<MarvelCharacter> = this.ar.params.pipe(
-    switchMap(params => this.marvelCharacterService.get(params.id))
+    switchMap(params => {
+      if (Number(params.id) === 0) {
+        return of(new MarvelCharacter());
+      }
+      return this.marvelCharacterService.get(Number(params.id));
+    })
   );
   marvelCharacter: MarvelCharacter = new MarvelCharacter();
 
@@ -70,9 +75,17 @@ export class MarvelCharacterEditorComponent implements OnInit {
   }
 
   onSave(marvelCharacter: MarvelCharacter): void {
-    this.marvelCharacterService.update(marvelCharacter).subscribe(
-      entity => this.router.navigate(['marvel-universe/marvel-characters'])
-    );
+
+    if (marvelCharacter._id == 0) {
+      this.marvelCharacterService.create(marvelCharacter).subscribe(
+        () => this.router.navigate(['marvel-universe/marvel-characters'])
+      );
+    } else {
+      //this.updating = true;
+      this.marvelCharacterService.update(marvelCharacter).subscribe(
+        () => this.router.navigate(['marvel-universe/marvel-characters'])
+      );
+      }
   }
 
 }

@@ -1,5 +1,10 @@
 <div class="container-fluid p-4">
 
+  <div class="form-group d-flex justify-content-center mb-5">
+    <button [routerLink]="'0'" class="btn btn-success">Add New
+      {{ entity }}</button>
+  </div>
+
   <div class="filter mb-4">
       <select [(ngModel)]="filterKey" class="form-control select-css">
         <option *ngFor="let col of tableColumns" [value]="col.key">{{ col.title }}</option>
