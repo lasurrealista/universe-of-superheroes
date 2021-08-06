@@ -1,1 +1,16 @@
-<p>marvel-comic-editor works!</p>
+<div class="jumbotron-holder p-5">
+  <div class="row pb-5">
+    <div class="col-8 offset-2">
+      <div class="mt-5">
+        <h1 class="h2 text-center">Marvel Comic Details</h1>
+      </div>
+        <app-areus-form
+          *ngIf="showForm"
+          [fieldList]="fields"
+          (submitted)="onSave($event)"
+        ></app-areus-form>
+
+    </div>
+  </div>
+</div>
+
