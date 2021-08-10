@@ -6,7 +6,7 @@ Az alkalmazás feladata, hogy a Marvel és a DC szuperhőseinek, illetve a Marve
 
 - Forkolni kell az adott GitHub repository tartalmát:
 
-    [https://github.com/lasurrealista/universe-of-superheroes]
+    https://github.com/lasurrealista/universe-of-superheroes
 
 - A célgépre le kell klónozni az adott GitHub repository tartalmát.
 
@@ -30,8 +30,8 @@ Az alkalmazás feladata, hogy a Marvel és a DC szuperhőseinek, illetve a Marve
 
 A /frontend/environments mappában be kell állítani az API végpont elérési útvonalát: 
 
-  - _environment.ts_ állomány: [http://127.0.0.1:3000/]  
-  - _environment.prod.ts_ állomány: [http://localhost:3000/]
+  - _environment.ts_ állomány: http://127.0.0.1:3000/  
+  - _environment.prod.ts_ állomány: http://localhost:3000/ 
 
 ## **4. Az alkalmazás indítása**
 
