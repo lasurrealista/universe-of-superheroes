@@ -4,25 +4,47 @@ Az alkalmazás feladata, hogy a Marvel és a DC szuperhőseinek, illetve a Marve
 
 ## **2. Az alkalmazás telepítése**
 
+- Forkolni kell az adott GitHub repository tartalmát:
+
+    [https://github.com/lasurrealista/universe-of-superheroes]
+
 - A célgépre le kell klónozni az adott GitHub repository tartalmát.
-- Telepíteni kell az alkalmazás függőségeit az `npm i` paranccsal.
-- Ha további fejlesztések szükségesek, akkor telepíteni kell az Angular keretrendszert az `npm i -g @angular/cli` paranccsal.
+
+   `git clone https://github.com/lasurrealista/universe-of-superheroes.git`
+
+- Telepíteni kell az alkalmazás függőségeit:
+
+    - Backend
+
+        - A terminálon be kell lépni a /backend mappába és futtatni az `npm i` parancsot.
+    
+    - Frontend
+
+        - A terminálon be kell lépni a /frontend mappába és futtatni az `npm i` parancsot.  
+
+- Ha még nincsen fenn a célgépen, akkor telepíteni kell az Angular keretrendszert az `npm i -g @angular/cli` paranccsal.
+- A terminálban ki kell adni az `ng build` parancsot.
+- A /frontend/dist mappa tartalmát be kell másolni a /backend/public mappába.
 
 ## **3. Az alkalmazás konfigurálása**
 
-A _base.service.ts_ állományban be kell állítani az API végpont elérési útvonalát:  
+A /frontend/environments mappában be kell állítani az API végpont elérési útvonalát: 
 
-[comment]: <> (Kiegészítés később - pl. http://localhost:3000)
+  - _environment.ts_ állomány: [http://127.0.0.1:3000/]  
+  - _environment.prod.ts_ állomány: [http://localhost:3000/]
 
 ## **4. Az alkalmazás indítása**
 
-A megadott Docker container indítása és inicializálása.
+A megadott Docker container indítása és inicializálása:
 
-[comment]: <> (Kiegészítés később)
+- El kell indítani a Docker Desktop alkalmazást.
+- A /backend mappába belépve a terminálban ki kell adni az `npm run dev` parancsot.
+
 
 ## **5. A végpontok dokumentációja**
 
-[Swagger](https://)
+Ide kattintva elérhető:
+[Swagger](https://localhost:3000/api-docs)
 
 ---
 ---
