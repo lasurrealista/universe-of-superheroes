@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AreusFormModule } from './areus-form/areus-form.module';
 
@@ -32,6 +32,8 @@ import { LoginComponent } from './page/login/login.component';
 import { FilterByNamePipe } from './pipe/filter-by-name.pipe';
 import { UserComponent } from './page/user/user.component';
 import { UserEditorComponent } from './page/user-editor/user-editor.component';
+
+import { JwtInterceptorInterceptor } from './service/jwt-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,13 @@ import { UserEditorComponent } from './page/user-editor/user-editor.component';
     FormsModule,
     AreusFormModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptorInterceptor,
+      multi: true
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

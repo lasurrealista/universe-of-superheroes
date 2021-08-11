@@ -5,12 +5,12 @@ const jwt = require('jsonwebtoken');
 
 const Users = [
     {
-        username: 'admin',
+        email: 'admin',
         password: 'admin_pw',
         role: 'admin'
     },
     {
-        username: 'user',
+        email: 'user',
         password: 'user_pw',
         role: 'user'
     }
@@ -19,32 +19,33 @@ const Users = [
 const refreshTokens = [];
 
 module.exports.login = (req, res) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
     const user = Users.find(
-        u => u.username === username && u.password === password
+        u => u.email === email && u.password === password
     );
 
     if (user) {
         const accessToken = jwt.sign({
-            username: user.username,
+            email: user.email,
             role: user.role
         }, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: process.env.TOKEN_EXPIRY
         });
 
         const refreshToken = jwt.sign({
-            username: user.username,
+            email: user.email,
             role: user.role
         }, process.env.REFRESH_TOKEN_SECRET);
         refreshTokens.push(refreshToken);
 
         res.json({
             accessToken,
-            refreshToken
+            refreshToken,
+            user
         });
     } else {
-        res.send('Username or password incorrect.');
+        res.send('Incorrect email or password.');
     }
 
 };
@@ -68,7 +69,7 @@ module.exports.refresh = (req, res, next) => {
         }
 
         const accessToken = jwt.sign({
-            username: user.username,
+            email: user.email,
             role: user.role
         }, process.env.ACCESS_TOKEN_SECRET, {
             expiresIn: process.env.TOKEN_EXPIRY

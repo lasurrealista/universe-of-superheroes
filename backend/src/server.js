@@ -47,16 +47,13 @@ app.post('/login', authHandler.login);
 app.post('/refresh', authHandler.refresh);
 app.post('/logout', authHandler.logout);
 
-//app.use('/person', authenticateJwt, require('./controllers/person/person.routes'));
-//app.use('/post', authenticateJwt, adminOnly, require('./controllers/post/post.routes'));
-
-app.use('/superheroes', require('./controllers/superhero/routes'));
-app.use('/marvel-characters', require('./controllers/marvelCharacter/routes'));
-app.use('/marvel-comics', require('./controllers/marvelComic/routes'));
-app.use('/marvel-creators', require('./controllers/marvelCreator/routes'));
-app.use('/marvel-events', require('./controllers/marvelEvent/routes'));
-app.use('/marvel-stories', require('./controllers/marvelStory/routes'));
-app.use('/users', require('./controllers/user/routes'));
+app.use('/superheroes', authenticateJwt, require('./controllers/superhero/routes'));
+app.use('/marvel-characters', authenticateJwt, require('./controllers/marvelCharacter/routes'));
+app.use('/marvel-comics', authenticateJwt, require('./controllers/marvelComic/routes'));
+app.use('/marvel-creators', authenticateJwt, require('./controllers/marvelCreator/routes'));
+app.use('/marvel-events', authenticateJwt, require('./controllers/marvelEvent/routes'));
+app.use('/marvel-stories', authenticateJwt, require('./controllers/marvelStory/routes'));
+app.use('/users', authenticateJwt, adminOnly, require('./controllers/user/routes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use( (err, req, res, next) => {
