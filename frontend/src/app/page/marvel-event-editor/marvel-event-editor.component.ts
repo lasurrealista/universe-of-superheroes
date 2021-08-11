@@ -18,10 +18,10 @@ export class MarvelEventEditorComponent implements OnInit {
 
   marvelEvent$: Observable<MarvelEvent> = this.ar.params.pipe(
     switchMap(params => {
-      if (Number(params.id) === 0) {
+      if (params.id === '0') {
         return of(new MarvelEvent());
       }
-      return this.marvelEventService.get(Number(params.id));
+      return this.marvelEventService.get(params.id);
     })
   );
   marvelEvent: MarvelEvent = new MarvelEvent();

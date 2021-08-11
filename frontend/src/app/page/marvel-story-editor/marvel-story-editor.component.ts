@@ -1,3 +1,4 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -17,10 +18,10 @@ export class MarvelStoryEditorComponent implements OnInit {
 
   marvelStory$: Observable<MarvelStory> = this.ar.params.pipe(
     switchMap(params => {
-      if (Number(params.id) === 0) {
+      if (params.id === '0') {
         return of(new MarvelStory());
       }
-      return this.marvelStoryService.get(Number(params.id));
+      return this.marvelStoryService.get(params.id);
     })
   );
   marvelStory: MarvelStory = new MarvelStory();

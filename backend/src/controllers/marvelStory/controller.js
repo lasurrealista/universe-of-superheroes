@@ -4,7 +4,6 @@ const createError = require('http-errors');
 const Model = require('../../models/marvelStory.model');
 const service = require('./service');
 
-// Create a new person.
 exports.create = (req, res, next) => {
     const validationErrors = new Model(req.body).validateSync();
     if (validationErrors) {

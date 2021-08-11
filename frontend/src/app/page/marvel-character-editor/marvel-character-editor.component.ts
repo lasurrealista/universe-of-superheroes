@@ -18,10 +18,10 @@ export class MarvelCharacterEditorComponent implements OnInit {
 
   marvelCharacter$: Observable<MarvelCharacter> = this.ar.params.pipe(
     switchMap(params => {
-      if (Number(params.id) === 0) {
+      if (params.id === '0') {
         return of(new MarvelCharacter());
       }
-      return this.marvelCharacterService.get(Number(params.id));
+      return this.marvelCharacterService.get(params.id);
     })
   );
   marvelCharacter: MarvelCharacter = new MarvelCharacter();

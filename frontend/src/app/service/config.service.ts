@@ -93,11 +93,9 @@ export class ConfigService {
 
   marvelEventColumns: ITableColumn[] = [
     {key: "_id", title: "#"},
-    {key: "thumbnail", title: "Image", pipes: [ConfigService.cutLongString],
-    pipeArgs: [[0, 25]]},
     {key: "title", title: "Title"},
     {key: "description", title: "Description", pipes: [ConfigService.cutLongString],
-    pipeArgs: [[0, 200]]},
+    pipeArgs: [[0, 150]]},
     {key: "modified", title: "Modified"},
     {key: "url", title: "Event Homepage", pipes: [ConfigService.cutLongString],
     pipeArgs: [[0, 25]]}

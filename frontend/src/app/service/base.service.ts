@@ -26,7 +26,8 @@ export class BaseService<T extends { _id: string | number }> {
   }
 
   create(entity: T): Observable<T> {
-    return this.http.post<T>(`${this.config.apiUrl}${this.entity}`, entity);
+    const postObject = {...entity, _id: null};
+    return this.http.post<T>(`${this.config.apiUrl}${this.entity}`, postObject);
   }
 
   update(entity: T): Observable<T> {

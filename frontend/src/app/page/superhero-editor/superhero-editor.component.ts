@@ -31,10 +31,10 @@ export class SuperheroEditorComponent implements OnInit {
     this.superheroService.getAll();
     this.activatedRoute.params.subscribe(
       params => {
-        if (Number(params.id == 0)) {
+        if (Number(params.id === '0')) {
           this.superhero$ = of( new Superhero() );
         } else {
-          this.superhero$ = this.superheroService.get(Number(params.id));
+          this.superhero$ = this.superheroService.get(params.id);
         }
       })
   }

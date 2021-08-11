@@ -17,10 +17,10 @@ export class MarvelCreatorEditorComponent implements OnInit {
 
   marvelCreator$: Observable<MarvelCreator> = this.ar.params.pipe(
     switchMap(params => {
-      if (Number(params.id) === 0) {
+      if (params.id === '0') {
         return of(new MarvelCreator());
       }
-      return this.marvelCreatorService.get(Number(params.id));
+      return this.marvelCreatorService.get(params.id);
     })
   );
   marvelCreator: MarvelCreator = new MarvelCreator();

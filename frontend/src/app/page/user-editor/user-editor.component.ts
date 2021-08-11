@@ -17,10 +17,10 @@ export class UserEditorComponent implements OnInit {
 
   user$: Observable<User> = this.ar.params.pipe(
     switchMap(params => {
-      if (Number(params.id) === 0) {
+      if (params.id === '0') {
         return of(new User());
       }
-      return this.userService.get(Number(params.id));
+      return this.userService.get(params.id);
     })
   );
   user: User = new User();

@@ -17,10 +17,10 @@ export class MarvelComicEditorComponent implements OnInit {
 
   marvelComic$: Observable<MarvelComic> = this.ar.params.pipe(
     switchMap(params => {
-      if (Number(params.id) === 0) {
+      if (params.id === '0') {
         return of(new MarvelComic());
       }
-      return this.marvelComicService.get(Number(params.id));
+      return this.marvelComicService.get(params.id);
     })
   );
   marvelComic: MarvelComic = new MarvelComic();

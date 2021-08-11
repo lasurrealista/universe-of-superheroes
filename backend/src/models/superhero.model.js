@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const PowerstatsSchema = new Schema({
+const PowerstatsSchema = mongoose.Schema({
     intelligence: {
         type: Number,
         required: true
@@ -29,14 +29,14 @@ const PowerstatsSchema = new Schema({
     timeStamps: true
 });
 
-const AppearanceSchema = new Schema({
+const AppearanceSchema = mongoose.Schema({
     gender: {
         type: String,
         required: true
     },
     race: {
         type: String,
-        required: true
+        required: false
     },
     height: {
         type: [String],
@@ -58,7 +58,7 @@ const AppearanceSchema = new Schema({
     timeStamps: true
 });
 
-const BiographySchema = new Schema({
+const BiographySchema = mongoose.Schema({
     fullName : {
         type: String,
         required: false
@@ -81,7 +81,7 @@ const BiographySchema = new Schema({
     },
     publisher : {
         type: String,
-        required: true
+        required: false
     },
     alignment : {
         type: String,
@@ -91,7 +91,7 @@ const BiographySchema = new Schema({
     timeStamps: true
 });
 
-const WorkSchema = new Schema({
+const WorkSchema = mongoose.Schema({
     occupation:  {
         type: String,
         required: true
@@ -104,7 +104,7 @@ const WorkSchema = new Schema({
     timeStamps: true
 });
 
-const ConnectionsSchema = new Schema({
+const ConnectionsSchema = mongoose.Schema({
     groupAffiliation: {
         type: String,
         required: false
@@ -117,7 +117,7 @@ const ConnectionsSchema = new Schema({
     timeStamps: true
 });
 
-const ImagesSchema = new Schema({
+const ImagesSchema = mongoose.Schema({
     xs: {
         type: String,
         required: true
