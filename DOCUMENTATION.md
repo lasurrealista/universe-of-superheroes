@@ -49,8 +49,8 @@ jmottinelli2d@reuters.com | $2a$10$u7hjgNaac3eKrcDvBLObTerNYNhEUkIOqK/GjCB0fTyYM
 
 ## **5. A végpontok dokumentációja**
 
-Ide kattintva elérhető:
-[Swagger](https://localhost:3000/api-docs)
+Swagger 
+- Az alábbi URL-t kell beírni a böngészőbe: https://localhost:3000/api-docs
 
 ---
 ---

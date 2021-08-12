@@ -21,13 +21,13 @@ const swaggerDocument = YAML.load('./docs/swagger.yaml');
 
 const { host } = config.get('database');
 mongoose
-    .connect(`mongodb://${host}`, {
+    .connect(host, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
     .then( () => 
     
-        //require('./seed/seeder'), // After the first 'npm run docker-compose:up' then comment it out.
+        // require('./seed/seeder'), // After the first 'npm run docker-compose:up' then comment it out.
         logger.info('MongoDB connection has been established successfully.'))
 
     .catch( err => {
