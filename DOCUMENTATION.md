@@ -38,8 +38,14 @@ A /frontend/environments mappában be kell állítani az API végpont elérési 
 A megadott Docker container indítása és inicializálása:
 
 - El kell indítani a Docker Desktop alkalmazást.
-- A /backend mappába belépve a terminálban ki kell adni az `npm run dev` parancsot.
+- A /backend mappába belépve a terminálban ki kell adni az `npm run dev` parancsot. 
 
+_Megjegyzés_:  
+A belépéshez egy érvényes e-mail-cím és jelszó páros (példa):  
+
+E-mail | Jelszó
+------------ | -------------
+jmottinelli2d@reuters.com | $2a$10$u7hjgNaac3eKrcDvBLObTerNYNhEUkIOqK/GjCB0fTyYMqWaVTwl2
 
 ## **5. A végpontok dokumentációja**
 
