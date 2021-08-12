@@ -11,4 +11,13 @@ exports.findOne = id => User.findById(id).populate();
 
 exports.update = (id, updateData) => User.findByIdAndUpdate(id, updateData, {new: true});
 
-exports.delete = id => User.findByIdAndRemove(id);
+exports.delete = async id => {
+
+    const doc = await User.findByIdAndRemove(id);
+
+    if (!doc) {
+        throw new Error('Not found');
+    }
+    return doc.delete();
+}
+

@@ -11,4 +11,13 @@ exports.findOne = id => Superhero.findById(id).populate();
 
 exports.update = (id, updateData) => Superhero.findByIdAndUpdate(id, updateData, {new: true});
 
-exports.delete = id => Superhero.findByIdAndRemove(id);
+exports.delete = async id => {
+
+    const doc = await Superhero.findByIdAndRemove(id);
+
+    if (!doc) {
+        throw new Error('Not found');
+    }
+    return doc.delete();
+}
+

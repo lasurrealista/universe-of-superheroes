@@ -86,7 +86,7 @@ export class ConfigService {
     {key: "fullName", title: "Full Name"},
     {key: "thumbnail", title: "Image", pipes: [ConfigService.cutLongString],
     pipeArgs: [[0, 25]]},
-    {key: "comics - available", title: "Available Comics"},
+    {key: "comicsAvailable", title: "Available Comics"},
     {key: "url", title: "Comics", pipes: [ConfigService.cutLongString],
     pipeArgs: [[0, 28]]}
   ];

@@ -11,4 +11,13 @@ exports.findOne = id => MarvelCreator.findById(id).populate();
 
 exports.update = (id, updateData) => MarvelCreator.findByIdAndUpdate(id, updateData, {new: true});
 
-exports.delete = id => MarvelCreator.findByIdAndRemove(id);
+exports.delete = async id => {
+
+    const doc = await MarvelCreator.findByIdAndRemove(id);
+
+    if (!doc) {
+        throw new Error('Not found');
+    }
+    return doc.delete();
+}
+

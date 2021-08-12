@@ -9,6 +9,8 @@ paths:
   /superheroes:
     get:
       description: Returns a list of superheroes
+      security:
+        - bearerAuth: []
       tags:
         - Superheroes
       responses:
@@ -28,6 +30,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       description: Creates a new superhero
+      security:
+        - bearerAuth: []
       tags:
         - Superheroes
       requestBody:
@@ -58,6 +62,8 @@ paths:
   /superheroes/{_id}:
     get:
       description: Get a superhero
+      security:
+        - bearerAuth: []
       tags:
         - Superheroes
       parameters:
@@ -88,6 +94,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a superhero
+      security:
+        - bearerAuth: []
       tags:
         - Superheroes
       parameters:
@@ -123,6 +131,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Deletes a superhero
+      security:
+        - bearerAuth: []
       tags:
         - Superheroes
       parameters:
@@ -154,6 +164,8 @@ paths:
   /marvel-characters:
     get:
       description: Returns a list of Marvel characters
+      security:
+        - bearerAuth: []
       tags:
         - Marvel characters
       responses:
@@ -173,6 +185,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       description: Creates a new Marvel character
+      security:
+        - bearerAuth: []
       tags:
         - Marvel characters
       requestBody:
@@ -203,6 +217,8 @@ paths:
   /marvel-characters/{_id}:
     get:
       description: Get a Marvel character
+      security:
+        - bearerAuth: []
       tags:
         - Marvel characters
       parameters:
@@ -233,6 +249,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a Marvel character
+      security:
+        - bearerAuth: []
       tags:
         - Marvel characters
       parameters:
@@ -268,6 +286,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Deletes a Marvel character
+      security:
+        - bearerAuth: []
       tags:
         - Marvel characters
       parameters:
@@ -299,6 +319,8 @@ paths:
   /marvel-comics:
     get:
       description: Returns a list of Marvel comics
+      security:
+        - bearerAuth: []
       tags:
         - Marvel comics
       responses:
@@ -318,6 +340,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       description: Creates a new Marvel comic
+      security:
+        - bearerAuth: []
       tags:
         - Marvel comics
       requestBody:
@@ -348,6 +372,8 @@ paths:
   /marvel-comics/{_id}:
     get:
       description: Get a Marvel comic
+      security:
+        - bearerAuth: []
       tags:
         - Marvel comics
       parameters:
@@ -378,6 +404,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a Marvel comic
+      security:
+        - bearerAuth: []
       tags:
         - Marvel comics
       parameters:
@@ -413,6 +441,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Deletes a Marvel comic
+      security:
+        - bearerAuth: []
       tags:
         - Marvel comics
       parameters:
@@ -444,6 +474,8 @@ paths:
   /marvel-creators:
     get:
       description: Returns a list of Marvel creators
+      security:
+        - bearerAuth: []
       tags:
         - Marvel creators
       responses:
@@ -463,6 +495,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       description: Creates a new Marvel creator
+      security:
+        - bearerAuth: []
       tags:
         - Marvel creators
       requestBody:
@@ -493,6 +527,8 @@ paths:
   /marvel-creators/{_id}:
     get:
       description: Get a Marvel creator
+      security:
+        - bearerAuth: []
       tags:
         - Marvel creators
       parameters:
@@ -523,6 +559,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a Marvel creator
+      security:
+        - bearerAuth: []
       tags:
         - Marvel creators
       parameters:
@@ -558,6 +596,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Deletes a Marvel creator
+      security:
+        - bearerAuth: []
       tags:
         - Marvel creators
       parameters:
@@ -589,6 +629,8 @@ paths:
   /marvel-events:
     get:
       description: Returns a list of Marvel events
+      security:
+        - bearerAuth: []
       tags:
         - Marvel events
       responses:
@@ -608,6 +650,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       description: Creates a new Marvel event
+      security:
+        - bearerAuth: []
       tags:
         - Marvel events
       requestBody:
@@ -638,6 +682,8 @@ paths:
   /marvel-events/{_id}:
     get:
       description: Get a Marvel event
+      security:
+        - bearerAuth: []
       tags:
         - Marvel events
       parameters:
@@ -668,6 +714,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a Marvel event
+      security:
+        - bearerAuth: []
       tags:
         - Marvel events
       parameters:
@@ -703,6 +751,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Deletes a Marvel event
+      security:
+        - bearerAuth: []
       tags:
         - Marvel events
       parameters:
@@ -734,6 +784,8 @@ paths:
   /marvel-stories:
     get:
       description: Returns a list of Marvel stories
+      security:
+        - bearerAuth: []
       tags:
         - Marvel stories
       responses:
@@ -753,6 +805,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       description: Creates a new Marvel story
+      security:
+        - bearerAuth: []
       tags:
         - Marvel stories
       requestBody:
@@ -783,6 +837,8 @@ paths:
   /marvel-stories/{_id}:
     get:
       description: Get a Marvel story
+      security:
+        - bearerAuth: []
       tags:
         - Marvel stories
       parameters:
@@ -813,6 +869,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a Marvel story
+      security:
+        - bearerAuth: []
       tags:
         - Marvel stories
       parameters:
@@ -848,6 +906,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Deletes a Marvel story
+      security:
+        - bearerAuth: []
       tags:
         - Marvel stories
       parameters:
@@ -879,6 +939,8 @@ paths:
   /users:
     get:
       description: Returns a list of users
+      security:
+        - bearerAuth: []
       tags:
         - Users
       responses:
@@ -898,6 +960,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     post:
       description: Creates a new user
+      security:
+        - bearerAuth: []
       tags:
         - Users
       requestBody:
@@ -928,6 +992,8 @@ paths:
   /users/{_id}:
     get:
       description: Get a user
+      security:
+        - bearerAuth: []
       tags:
         - Users
       parameters:
@@ -958,6 +1024,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     patch:
       description: Updates a user
+      security:
+        - bearerAuth: []
       tags:
         - Users
       parameters:
@@ -993,6 +1061,8 @@ paths:
                 $ref: '#/components/schemas/Error'
     delete:
       description: Deletes a user
+      security:
+        - bearerAuth: []
       tags:
         - Users
       parameters:
@@ -1106,7 +1176,7 @@ components:
         url:
           type: string
         stories:
-          type: string
+          type: number
     MarvelComic:
       type: object
       required: 
@@ -1152,8 +1222,18 @@ components:
         description:
           type: string
         modified:
-          type: number
+          type: string
         url:
+          type: string
+    MarvelStory:
+      type: object
+      required:
+        - name
+        - title
+      properties: 
+        name:
+          type: string
+        title: 
           type: string
     Powerstats:
       type: object

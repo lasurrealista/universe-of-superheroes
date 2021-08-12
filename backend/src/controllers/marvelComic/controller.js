@@ -58,6 +58,13 @@ exports.delete = (req, res, next) => {
     return service.delete(req.params.id)
         .then( () => res.json({}) )
         .catch( err => {
+
+            if (err.message === "Not found") {
+                return next(
+                    new createError.NotFound(err.message)
+                )
+            }
+
             next(new createError.InternalServerError(err.message));
         } );
 };

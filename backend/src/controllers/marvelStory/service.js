@@ -11,4 +11,13 @@ exports.findOne = id => MarvelStory.findById(id).populate();
 
 exports.update = (id, updateData) => MarvelStory.findByIdAndUpdate(id, updateData, {new: true});
 
-exports.delete = id => MarvelStory.findByIdAndRemove(id);
+exports.delete = async id => {
+
+    const doc = await MarvelStory.findByIdAndRemove(id);
+
+    if (!doc) {
+        throw new Error('Not found');
+    }
+    return doc.delete();
+}
+
