@@ -4,6 +4,6 @@ export class Biography {
     aliases : string[] = [];
     placeOfBirth : string = '';
     firstAppearance : string = '';
-    publisher : string = '';
+    publisher? : string = '';
     alignment : string = '';
 }

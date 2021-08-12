@@ -28306,122 +28306,122 @@
         "_id": 13971,
         "fullName":"#X",
         "thumbnail":"http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 0,
+        "comicsAvailable": 0,
         "url": "http://marvel.com/comics/creators/13971/x?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       },
       {
         "_id": 13970,
         "fullName": "#O",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 4,
+        "comicsAvailable": 4,
         "url": "http://marvel.com/comics/creators/13970/o?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 6606,
         "fullName": "A.R.K.",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 14,
+        "comicsAvailable": 14,
         "url": "http://marvel.com/comics/creators/6606/ark.?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 1168,
         "fullName": "All Thumbs Creative",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 14,
+        "comicsAvailable": 14,
         "url":"http://marvel.com/comics/creators/1168/all_thumbs_creative?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 7470,
         "fullName": "ALSJOERDSMA",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 2,
+        "comicsAvailable": 2,
         "url": "http://marvel.com/comics/creators/7470/alsjoerdsma?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 4592,
         "fullName": "Arno",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 2,
+        "comicsAvailable": 2,
         "url": "http://marvel.com/comics/creators/4592/arno?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 3052,
         "fullName": "Avon",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/3052/avon?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 6535,
         "fullName": "B.K.",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/6535/bk.?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 12958,
         "fullName":"Balak",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/12958/balak?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 3188,
         "fullName": "Balcells",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 0,
+        "comicsAvailable": 0,
         "url": "http://marvel.com/comics/creators/3188/balcells?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 12660,
         "fullName": "Batt",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/12660/batt?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 6613,
         "fullName":"Beatty",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/6613/beatty?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 6919,
         "fullName":"Beckett",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/6919/beckett?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 8098,
         "fullName":"Bengal",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 9,
+        "comicsAvailable": 9,
         "url": "http://marvel.com/comics/creators/8098/bengal?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 9716,
         "fullName": "Benjamin",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/c/40/4bb52c198ff2a.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/9716/benjamin?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 3178,
         "fullName":"Bernet",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/3178/bernet?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 12701,
         "fullName":"BIT",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 1,
+        "comicsAvailable": 1,
         "url": "http://marvel.com/comics/creators/12701/bit?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 3095,
         "fullName": "Blank",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 8,
+        "comicsAvailable": 8,
         "url": "http://marvel.com/comics/creators/3095/blank?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 7646,
         "fullName": "Blond",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 8,
+        "comicsAvailable": 8,
         "url": "http://marvel.com/comics/creators/7646/blond?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }, {
         "_id": 7596,
         "fullName":"Brown",
         "thumbnail": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
-        "comics - available": 0,
+        "comicsAvailable": 0,
         "url": "http://marvel.com/comics/creators/7596/brown?utm_campaign=apiRef&utm_source=14f4ae6a45f097d65a5b56530da74ecc"
       }
     ],
