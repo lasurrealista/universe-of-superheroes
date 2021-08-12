@@ -148,9 +148,9 @@ const SuperheroSchema = mongoose.Schema({
         required: true
     },
     powerstats: PowerstatsSchema,
-    appearance: Appearance = AppearanceSchema,
-    biography: Biography = BiographySchema,
-    work: Work = WorkSchema,
+    appearance: AppearanceSchema,
+    biography: BiographySchema,
+    work: WorkSchema,
     connections: ConnectionsSchema,
     images: ImagesSchema,
 }, {
