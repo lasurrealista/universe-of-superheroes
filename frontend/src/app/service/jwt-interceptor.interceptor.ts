@@ -7,6 +7,8 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
+import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
 //import { Router } from '@angular/router';
 //import { catchError } from 'rxjs/operators';
 
@@ -15,7 +17,7 @@ export class JwtInterceptorInterceptor implements HttpInterceptor {
 
   constructor(
     private auth: AuthService,
-    //private router: Router
+    private router: Router
   ) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
@@ -28,9 +30,6 @@ export class JwtInterceptorInterceptor implements HttpInterceptor {
       });
     }
 
-    return next.handle(request);
-
-    /*
      return next.handle(request).pipe(
       catchError( (err): Observable<HttpEvent<unknown>> => {
         if (err.status === 401) {
@@ -39,6 +38,5 @@ export class JwtInterceptorInterceptor implements HttpInterceptor {
         return next.handle(request);
       })
     );
-    */
   }
 }

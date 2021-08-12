@@ -3,25 +3,16 @@ const jwt = require('jsonwebtoken');
 // Biztonságosabb megoldás, az adatbázis használata.
 // Példa: https://www.npmjs.com/package/mongoose-bcrypt
 
-const Users = [
-    {
-        email: 'admin',
-        password: 'admin_pw',
-        role: 'admin'
-    },
-    {
-        email: 'user',
-        password: 'user_pw',
-        role: 'user'
-    }
-];
+const users = require('../models/user.model');
 
 const refreshTokens = [];
 
-module.exports.login = (req, res) => {
+module.exports.login = async (req, res) => {
     const { email, password } = req.body;
 
-    const user = Users.find(
+    const usersFromDatabase = await users.find({});
+
+    const user = usersFromDatabase.find(
         u => u.email === email && u.password === password
     );
 

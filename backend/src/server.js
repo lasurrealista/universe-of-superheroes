@@ -53,7 +53,7 @@ app.use('/marvel-comics', authenticateJwt, require('./controllers/marvelComic/ro
 app.use('/marvel-creators', authenticateJwt, require('./controllers/marvelCreator/routes'));
 app.use('/marvel-events', authenticateJwt, require('./controllers/marvelEvent/routes'));
 app.use('/marvel-stories', authenticateJwt, require('./controllers/marvelStory/routes'));
-app.use('/users', authenticateJwt, adminOnly, require('./controllers/user/routes'));
+app.use('/users', authenticateJwt, require('./controllers/user/routes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use( (err, req, res, next) => {

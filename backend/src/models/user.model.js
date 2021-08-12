@@ -17,9 +17,9 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: false
     },
-    role: {
-        type: String,
-        required: false
+    role:  {
+        type: Number,
+        default: 0
     },
     accessToken: {
         type: String,
@@ -28,6 +28,8 @@ const UserSchema = mongoose.Schema({
 }, {
     timeStamps: true
 });
+
+UserSchema.plugin(require('mongoose-bcrypt'));
 
 module.exports = mongoose.model('User', UserSchema);
 
