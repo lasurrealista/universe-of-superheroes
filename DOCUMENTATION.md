@@ -24,7 +24,7 @@ Az alkalmazás feladata, hogy a Marvel és a DC szuperhőseinek, illetve a Marve
 
 - Ha még nincsen fenn a célgépen, akkor telepíteni kell az Angular keretrendszert az `npm i -g @angular/cli` paranccsal.
 - A terminálban ki kell adni az `ng build` parancsot.
-- A /frontend/dist mappa tartalmát be kell másolni a /backend/public mappába.
+- A /frontend/dist/frontend mappa tartalmát be kell másolni a /backend/public mappába.
 
 ## **3. Az alkalmazás konfigurálása**
 
