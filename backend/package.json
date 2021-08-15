@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "jest",
-    "docker:build": "docker build -t nodejs-api-fejlesztes:latest .",
+    "docker:build": "docker build -t nodejs-api:latest .",
     "docker-compose:up": "docker-compose up",
     "dev": "concurrently --kill-others \"docker-compose up\" \"node watcher.js\""
   },
