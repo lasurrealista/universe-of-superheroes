@@ -39,6 +39,7 @@ A megadott Docker container indítása és inicializálása:
 
 - El kell indítani a Docker Desktop alkalmazást.
 - A /backend mappába belépve a terminálban ki kell adni az `npm run dev` parancsot. 
+- A /frontend mappába belépve a terminálban ki kell adni az `npm start` parancsot. 
 
 _Megjegyzés_:  
 A belépéshez egy érvényes e-mail-cím és jelszó páros (példa):  
