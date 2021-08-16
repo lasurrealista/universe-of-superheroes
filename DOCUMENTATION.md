@@ -26,6 +26,10 @@ Az alkalmazás feladata, hogy a Marvel és a DC szuperhőseinek, illetve a Marve
 - A terminálban ki kell adni az `ng build` parancsot.
 - A /frontend/dist/frontend mappa tartalmát be kell másolni a /backend/public mappába.
 
+VAGY
+
+- A terminálon be kell lépni a /backend mappába és futtatni az `npm run build` parancsot.
+
 ## **3. Az alkalmazás konfigurálása**
 
 A /frontend/environments mappában be kell állítani az API végpont elérési útvonalát: 
