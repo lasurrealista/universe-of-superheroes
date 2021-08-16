@@ -19,6 +19,8 @@ const authHandler = require('./auth/authHandler');
 
 const swaggerDocument = YAML.load('./docs/swagger.yaml');
 
+const { join } = require('path');
+
 const { host } = config.get('database');
 mongoose
     .connect(host, {
@@ -43,18 +45,25 @@ app.use(morgan('combined', {stream: logger.stream}));
 app.use(bodyParser.json());
 
 // Router.
-app.post('/login', authHandler.login);
-app.post('/refresh', authHandler.refresh);
-app.post('/logout', authHandler.logout);
+app.post('/api/login', authHandler.login);
+app.post('/api/refresh', authHandler.refresh);
+app.post('/api/logout', authHandler.logout);
 
-app.use('/superheroes', authenticateJwt, require('./controllers/superhero/routes'));
-app.use('/marvel-characters', authenticateJwt, require('./controllers/marvelCharacter/routes'));
-app.use('/marvel-comics', authenticateJwt, require('./controllers/marvelComic/routes'));
-app.use('/marvel-creators', authenticateJwt, require('./controllers/marvelCreator/routes'));
-app.use('/marvel-events', authenticateJwt, require('./controllers/marvelEvent/routes'));
-app.use('/marvel-stories', authenticateJwt, require('./controllers/marvelStory/routes'));
-app.use('/users', authenticateJwt, require('./controllers/user/routes'));
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/superheroes', authenticateJwt, require('./controllers/superhero/routes'));
+app.use('/api/marvel-characters', authenticateJwt, require('./controllers/marvelCharacter/routes'));
+app.use('/api/marvel-comics', authenticateJwt, require('./controllers/marvelComic/routes'));
+app.use('/api/marvel-creators', authenticateJwt, require('./controllers/marvelCreator/routes'));
+app.use('/api/marvel-events', authenticateJwt, require('./controllers/marvelEvent/routes'));
+app.use('/api/marvel-stories', authenticateJwt, require('./controllers/marvelStory/routes'));
+app.use('/api/users', authenticateJwt, require('./controllers/user/routes'));
+app.use('/api/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+app.use(express.static('public'));
+
+// Page refreshing and frontend routing working properly
+app.get('*', (_req, res) => {
+  res.sendFile(join(__dirname, '../public/index.html'));
+});
 
 app.use( (err, req, res, next) => {
     res.status(err.statusCode || 500);

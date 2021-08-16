@@ -6,7 +6,7 @@ info:
 servers:
   - url: http://localhost:3000
 paths:
-  /superheroes:
+  /api/superheroes:
     get:
       description: Returns a list of superheroes
       security:
@@ -59,7 +59,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /superheroes/{_id}:
+  /api/superheroes/{_id}:
     get:
       description: Get a superhero
       security:
@@ -161,7 +161,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-characters:
+  /api/marvel-characters:
     get:
       description: Returns a list of Marvel characters
       security:
@@ -214,7 +214,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-characters/{_id}:
+  /api/marvel-characters/{_id}:
     get:
       description: Get a Marvel character
       security:
@@ -316,7 +316,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-comics:
+  /api/marvel-comics:
     get:
       description: Returns a list of Marvel comics
       security:
@@ -369,7 +369,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-comics/{_id}:
+  /api/marvel-comics/{_id}:
     get:
       description: Get a Marvel comic
       security:
@@ -471,7 +471,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-creators:
+  /api/marvel-creators:
     get:
       description: Returns a list of Marvel creators
       security:
@@ -524,7 +524,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-creators/{_id}:
+  /api/marvel-creators/{_id}:
     get:
       description: Get a Marvel creator
       security:
@@ -626,7 +626,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-events:
+  /api/marvel-events:
     get:
       description: Returns a list of Marvel events
       security:
@@ -679,7 +679,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-events/{_id}:
+  /api/marvel-events/{_id}:
     get:
       description: Get a Marvel event
       security:
@@ -781,7 +781,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-stories:
+  /api/marvel-stories:
     get:
       description: Returns a list of Marvel stories
       security:
@@ -834,7 +834,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /marvel-stories/{_id}:
+  /api/marvel-stories/{_id}:
     get:
       description: Get a Marvel story
       security:
@@ -936,7 +936,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /users:
+  /api/users:
     get:
       description: Returns a list of users
       security:
@@ -989,7 +989,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-  /users/{_id}:
+  /api/users/{_id}:
     get:
       description: Get a user
       security:
