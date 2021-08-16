@@ -34,8 +34,8 @@ VAGY
 
 A /frontend/environments mappában be kell állítani az API végpont elérési útvonalát: 
 
-  - _environment.ts_ állomány: http://127.0.0.1:3000/api/  
-  - _environment.prod.ts_ állomány: http://localhost:3000/api/ 
+  - _environment.ts_ állomány: http://127.0.0.1:3000/  
+  - _environment.prod.ts_ állomány: http://localhost:3000/ 
 
 ## **4. Az alkalmazás indítása**
 
@@ -55,7 +55,7 @@ jmottinelli2d@reuters.com | $2a$10$u7hjgNaac3eKrcDvBLObTerNYNhEUkIOqK/GjCB0fTyYM
 ## **5. A végpontok dokumentációja**
 
 Swagger 
-- Az alábbi URL-t kell beírni a böngészőbe: https://localhost:3000/api/api-docs
+- Az alábbi URL-t kell beírni a böngészőbe: https://localhost:3000/api-docs
 
 ---
 ---
