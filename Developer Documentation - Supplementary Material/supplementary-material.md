@@ -18,7 +18,7 @@ Az alkalmazás feladata, hogy a Marvel és a DC szuperhőseinek, illetve a Marve
 - Az API-hoz Swagger alapú dokumentáció tartozik
 - A felület bizonyos oldalai csak belépés után elérhetőek (JWT autentikáció) 
 - Adminisztrátori szerepkört leíró User Story a README.md-ben
-- Markdown dokumentáció a documentaton.md-ben
+- Markdown dokumentáció a documentation.md-ben
 - Az alkalmazás dockerizálva van, konténerből futtatható 
 
 **Megjelenése:**
